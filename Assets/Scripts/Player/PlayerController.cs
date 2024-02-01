@@ -48,7 +48,11 @@ public class PlayerController : MonoBehaviour
 
     [Header("Attack Components")]
     [SerializeField] private WeaponsController _weaponsController;
-    
+
+    private bool _canAttack = true;
+    private float _damageTimeout = 0.2f;
+    private float _recoveryTime = 0f;
+
 
 
     void Awake()
@@ -74,7 +78,9 @@ public class PlayerController : MonoBehaviour
 
     private void Fire_performed(InputAction.CallbackContext obj)
     {
-        _weaponsController.Shoot();
+        _canAttack = (Time.time > _recoveryTime);
+        if (_canAttack)
+            _weaponsController.Shoot();
     }
 
     private void Run_canceled(InputAction.CallbackContext obj)
@@ -118,10 +124,12 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    #region MOVEMENT
+
     private void Move()
     {
         //Translation
-        _movement = transform.forward * _movementInputs.y * _speed;        
+        _movement = transform.forward * _movementInputs.y * _speed;
         _isGrounded = _characterController.isGrounded;
 
         if (_isGrounded && _yVelocity < 0.0f)
@@ -149,8 +157,21 @@ public class PlayerController : MonoBehaviour
             _avatar.transform.localRotation = Quaternion.Euler(Vector3.zero);
     }
 
+    private void Jump()
+    {
+        if (_isGrounded && !_isJumping)
+        {
+            _yVelocity += _jumpHeight;
+            _isJumping = true;
+        }
+    }
+
+    #endregion
+
+    #region ANIMATIONS
+
     private void UpdateAnimations()
-    {        
+    {
         float multiplier = (!_isRunning ? 0.5f : _speed / _walkingSpeed);
         _movementAnimation.x = _movementInputs.x * 0.5f;
         _movementAnimation.y = Mathf.Abs(_movementInputs.y * multiplier);
@@ -161,13 +182,11 @@ public class PlayerController : MonoBehaviour
         _animator.SetBool(_animIsGrounded, _isGrounded);
         _animator.SetBool(_animIsJumping, _isJumping);
     }
-   
-    private void Jump()
+
+    public void Damage()
     {
-        if (_isGrounded && !_isJumping)
-        {            
-            _yVelocity += _jumpHeight;
-            _isJumping = true;
-        }
-    }    
+        _recoveryTime = Time.time + _damageTimeout;
+    }
+
+    #endregion
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5157472531557283515}
   m_Layer: 0
-  m_Name: ProjectileSpawnPoint
+  m_Name: AimCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,12 +25,96 @@ Transform:
   m_GameObject: {fileID: 663910799080170351}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.281, z: 0.477}
+  m_LocalPosition: {x: 0, y: 1.3, z: 0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4706978957780854559}
   m_Father: {fileID: 321784642796245881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1976635577728775018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4706978957780854559}
+  - component: {fileID: 1125577413759913803}
+  - component: {fileID: 8050190381926722487}
+  m_Layer: 0
+  m_Name: ProjectileSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4706978957780854559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976635577728775018}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 5157472531557283515}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1125577413759913803
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976635577728775018}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8050190381926722487
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976635577728775018}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2043977988748547876
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,15 +231,10 @@ MonoBehaviour:
   _avatar: {fileID: 1657087746352383861}
   _walkingSpeed: 5
   _runningSpeed: 8
-  _rotatingSpeed: 2
-  _gravity: -9.8
-  _jumpHeight: 3
+  _rotatingSpeed: 1
+  _gravityMultiplier: 1
+  _jumpHeight: 10
   _animator: {fileID: 5428197640643872693}
-  _groundCheck: {fileID: 8580389027054825455}
-  _groundRadius: 0.5
-  _groundMask:
-    serializedVersion: 2
-    m_Bits: 64
   _weaponsController: {fileID: 8054817343080858158}
 --- !u!143 &3638213703871173947
 CharacterController:
@@ -196,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectilePrefab: {fileID: 550784884268911729, guid: 6885dbc4ec9987e489210c8c3b726608, type: 3}
-  _spawnPosition: {fileID: 5157472531557283515}
+  _spawnPosition: {fileID: 4706978957780854559}
   _cooldown: 0.2
   _collectionCheck: 1
   _defaultCapacity: 10
@@ -214,7 +293,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7137567fc68e4489a3105618195f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cannonPoint: {fileID: 5157472531557283515}
+  _aimCenter: {fileID: 5157472531557283515}
+  _shootPointOffset: {x: 0, y: 1.3, z: 0.8}
+  _boxCastCenterOffset: {x: 0, y: 2, z: 6}
+  _boxCastHalfSize: {x: 4, y: 2, z: 6}
+  _targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1001 &1891020737455700516
 PrefabInstance:
   m_ObjectHideFlags: 0
