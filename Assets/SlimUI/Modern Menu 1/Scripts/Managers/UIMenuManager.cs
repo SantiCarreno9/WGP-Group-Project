@@ -44,10 +44,14 @@ namespace SlimUI.ModernMenu{
         public GameObject PanelCombat;
         [Tooltip("The UI Sub-Panel under KEY BINDINGS for GENERAL")]
         public GameObject PanelGeneral;
-        
+		[Tooltip("The UI Sub-Panel to load game")]
+		public GameObject loadGameCanvas;
+		[Tooltip("The UI Sub-Panel to change options")]
+		public GameObject optionCanvas;
 
-        // highlights in settings screen
-        [Header("SETTINGS SCREEN")]
+
+		// highlights in settings screen
+		[Header("SETTINGS SCREEN")]
         [Tooltip("Highlight Image for when GAME Tab is selected in Settings")]
         public GameObject lineGame;
         [Tooltip("Highlight Image for when VIDEO Tab is selected in Settings")]
@@ -151,7 +155,15 @@ namespace SlimUI.ModernMenu{
 
 		public void Position2(){
 			DisablePlayCampaign();
+			loadGameCanvas.SetActive(false);
+			optionCanvas.SetActive(true);
 			CameraObject.SetFloat("Animate",1);
+		}
+		public void LGameCanvas()
+		{
+			loadGameCanvas.SetActive(true);
+			optionCanvas.SetActive(false);
+			CameraObject.SetFloat("Animate", 1);
 		}
 
 		public void Position1(){
