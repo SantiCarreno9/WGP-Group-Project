@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -48,6 +49,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Attack Components")]
     [SerializeField] private WeaponsController _weaponsController;
+    public UnityAction OnShootStarted;
+    public UnityAction OnShootCanceled;
 
     private bool _canAttack = true;
     private float _damageTimeout = 0.2f;
@@ -68,10 +71,10 @@ public class PlayerController : MonoBehaviour
         _inputs.Player.Jump.performed += context => Jump();
 
         _inputs.Player.Fire.performed += Fire_performed;
+        _inputs.Player.Fire.canceled += Fire_canceled;
 
         _speed = _walkingSpeed;
     }
-
 
 
     #region USER INPUTS EVENTS
@@ -80,7 +83,15 @@ public class PlayerController : MonoBehaviour
     {
         _canAttack = (Time.time > _recoveryTime);
         if (_canAttack)
+        {
             _weaponsController.Shoot();
+            OnShootStarted?.Invoke();
+        }
+    }
+
+    private void Fire_canceled(InputAction.CallbackContext obj)
+    {
+        OnShootCanceled?.Invoke();
     }
 
     private void Run_canceled(InputAction.CallbackContext obj)

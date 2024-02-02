@@ -2,8 +2,15 @@ using UnityEngine;
 
 public class AimController : MonoBehaviour
 {
-    [SerializeField] private Transform _aimCenter;    
+    [Header("Aim Components")]
+    [SerializeField] private Transform _autoAim;
+    [SerializeField] private Transform _aimCenter;
 
+    [Header("Aim Constraints")]
+    [SerializeField] private float _maxHorizontalAngle = 50;
+    [SerializeField] private float _maxVerticalAngle = 30;
+
+    [Header("Overlap Box")]
     [SerializeField] private Vector3 _boxCastCenterOffset = Vector3.zero;
     [SerializeField] private Vector3 _boxCastHalfSize = Vector3.one;
     [SerializeField] private LayerMask _targetLayer;
@@ -24,13 +31,16 @@ public class AimController : MonoBehaviour
         DetectEnemies();
         if (_hitDetect)
         {
-            Vector3 direction = _target.position - _aimCenter.position;
-            float angle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg - 90;
-            angle = Mathf.Abs(angle);
-            Debug.Log(angle);
-            if (angle <= 50 && angle >= 0)
-                _aimCenter.LookAt(_target);
-            else _aimCenter.rotation = transform.rotation;
+            _autoAim.LookAt(_target);
+            Vector3 aimAngle = _autoAim.localEulerAngles;
+            float horizontalAngle = (aimAngle.y > 180) ? Mathf.Abs(360 - aimAngle.y) : aimAngle.y;
+            float verticalAngle = (aimAngle.x > 180) ? Mathf.Abs(360 - aimAngle.x) : aimAngle.x;
+
+            Debug.Log("Horizontal: " + horizontalAngle + " Vertical: " + verticalAngle);
+
+            if (horizontalAngle <= _maxHorizontalAngle && verticalAngle <= _maxVerticalAngle)
+                _aimCenter.localRotation = _autoAim.localRotation;
+            else _aimCenter.localRotation = Quaternion.Euler(Vector3.zero);
         }
         else _aimCenter.rotation = transform.rotation;
     }
@@ -69,10 +79,10 @@ public class AimController : MonoBehaviour
             _target = null;
     }
 
-    //private void FixedUpdate()
-    //{
-    //    UpdateAimDirection();
-    //}
+    private void FixedUpdate()
+    {
+        UpdateAimDirection();
+    }
 
     //void OnDrawGizmos()
     //{
