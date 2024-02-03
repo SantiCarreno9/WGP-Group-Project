@@ -11,7 +11,6 @@ public class WeaponsController : MonoBehaviour
 
     [Tooltip("Time between shots")]
     [SerializeField] private float _cooldown = 0.3f;
-    [SerializeField] private float _continuousCooldown = 0.3f;
 
     private IObjectPool<Projectile> _projectilePool;
 

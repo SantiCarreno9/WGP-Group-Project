@@ -285,11 +285,33 @@
                 },
                 {
                     "name": "",
+                    "id": "f16a8519-ce4f-4359-a56b-c0c0e4a416b5",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "8e430aef-cf66-4faa-8571-0015aa9a048b",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1eb395aa-8219-404c-b18c-59a75e97c4e1",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "Run",
                     "isComposite": false,
                     "isPartOfComposite": false

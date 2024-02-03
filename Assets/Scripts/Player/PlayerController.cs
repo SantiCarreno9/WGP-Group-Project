@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _rotatingSpeed = 1f;
     [SerializeField] private float _gravityMultiplier = 2f;
     [SerializeField] private float _jumpHeight = 2.0f;
+    [SerializeField] private float _damageTimeout = 0.2f;
 
     private float _speed = 0;
     private const float gravity = -9.8f;
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
     private int _animIsJumping = Animator.StringToHash("isJumping");
     private int _animIsGrounded = Animator.StringToHash("isGrounded");
     private int _animIsFalling = Animator.StringToHash("isFalling");
+    private int _animIsGettingHit = Animator.StringToHash("GetHit");
 
     private Vector2 _movementAnimation = Vector2.zero;
 
@@ -53,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
     private bool _canAttack = true;
     private bool _isAttacking = false;
-    private float _damageTimeout = 0.2f;
+    
     private float _recoveryTime = 0f;
     private bool _interactionsEnabled = true;
 
@@ -70,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
         _inputs.Player.Jump.performed += context => Jump();
 
-        _inputs.Player.Fire.started += Fire_started;
+        _inputs.Player.Fire.performed += Fire_performed;
         _inputs.Player.Fire.canceled += Fire_canceled;
 
         _speed = _walkingSpeed;
@@ -79,9 +81,9 @@ public class PlayerController : MonoBehaviour
 
     #region USER INPUTS EVENTS
 
-    private void Fire_started(InputAction.CallbackContext obj)
+    private void Fire_performed(InputAction.CallbackContext obj)
     {
-        _canAttack = (Time.time > _recoveryTime && !_isMovingBackwards);
+        _canAttack = (!IsGettingHit() && !_isMovingBackwards);
         if (_canAttack)
         {
             _attackController.StartAttacking();
@@ -136,14 +138,16 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (_interactionsEnabled)
+        if (_interactionsEnabled && !IsGettingHit())
         {
             Move();
             UpdateAnimations();
         }
-
+        //TEST ONLY
         if (Input.GetKeyDown(KeyCode.M))
             Die();
+        if (Input.GetKeyDown(KeyCode.N))
+            Damage();
     }
 
     #region MOVEMENT
@@ -187,6 +191,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private bool IsGettingHit() => Time.time < _recoveryTime;
+
     #endregion
 
     private void DeactivateController()
@@ -207,13 +213,14 @@ public class PlayerController : MonoBehaviour
         _animator.SetFloat(_animForward, _movementAnimation.y);
         _animator.SetBool(_animIsFalling, _isFalling);
         _animator.SetBool(_animIsGrounded, _isGrounded);
-        _animator.SetBool(_animIsJumping, _isJumping);
+        _animator.SetBool(_animIsJumping, _isJumping);        
     }
+    
 
     public void Damage()
     {
         _recoveryTime = Time.time + _damageTimeout;
-        _animator.Play("Damage");
+        _animator.SetTrigger(_animIsGettingHit);
     }
 
     public void Die()
