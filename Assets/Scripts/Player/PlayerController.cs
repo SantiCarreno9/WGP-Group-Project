@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -27,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private bool _isJumping = false;
     private bool _isFalling = false;
     private float _yVelocity = 0;
+    private bool _isMovingBackwards = false;
     private Vector3 _movement;
 
     [Header("Animations")]
@@ -48,14 +47,15 @@ public class PlayerController : MonoBehaviour
 
 
     [Header("Attack Components")]
-    [SerializeField] private WeaponsController _weaponsController;
+    [SerializeField] private AttackController _attackController;
     public UnityAction OnShootStarted;
     public UnityAction OnShootCanceled;
 
     private bool _canAttack = true;
+    private bool _isAttacking = false;
     private float _damageTimeout = 0.2f;
     private float _recoveryTime = 0f;
-
+    private bool _interactionsEnabled = true;
 
 
     void Awake()
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
         _inputs.Player.Jump.performed += context => Jump();
 
-        _inputs.Player.Fire.performed += Fire_performed;
+        _inputs.Player.Fire.started += Fire_started;
         _inputs.Player.Fire.canceled += Fire_canceled;
 
         _speed = _walkingSpeed;
@@ -79,19 +79,25 @@ public class PlayerController : MonoBehaviour
 
     #region USER INPUTS EVENTS
 
-    private void Fire_performed(InputAction.CallbackContext obj)
+    private void Fire_started(InputAction.CallbackContext obj)
     {
-        _canAttack = (Time.time > _recoveryTime);
+        _canAttack = (Time.time > _recoveryTime && !_isMovingBackwards);
         if (_canAttack)
         {
-            _weaponsController.Shoot();
+            _attackController.StartAttacking();
+            _isAttacking = true;
             OnShootStarted?.Invoke();
         }
     }
 
     private void Fire_canceled(InputAction.CallbackContext obj)
     {
-        OnShootCanceled?.Invoke();
+        if (_isAttacking)
+        {
+            _isAttacking = false;
+            _attackController.StopAttacking();
+            OnShootCanceled?.Invoke();
+        }
     }
 
     private void Run_canceled(InputAction.CallbackContext obj)
@@ -130,9 +136,14 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Move();
-        UpdateAnimations();
+        if (_interactionsEnabled)
+        {
+            Move();
+            UpdateAnimations();
+        }
 
+        if (Input.GetKeyDown(KeyCode.M))
+            Die();
     }
 
     #region MOVEMENT
@@ -162,10 +173,9 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateAvatarOrientation()
     {
-        if (_movementInputs.y < 0)
-            _avatar.transform.localRotation = Quaternion.Euler(Vector3.up * 180);
-        else
-            _avatar.transform.localRotation = Quaternion.Euler(Vector3.zero);
+        _isMovingBackwards = _movementInputs.y < 0;
+        _avatar.transform.localRotation = (_isMovingBackwards) ? Quaternion.Euler(Vector3.up * 180)
+            : Quaternion.Euler(Vector3.zero);
     }
 
     private void Jump()
@@ -178,6 +188,12 @@ public class PlayerController : MonoBehaviour
     }
 
     #endregion
+
+    private void DeactivateController()
+    {
+        _inputs.Disable();
+        _characterController.enabled = false;
+    }
 
     #region ANIMATIONS
 
@@ -197,7 +213,13 @@ public class PlayerController : MonoBehaviour
     public void Damage()
     {
         _recoveryTime = Time.time + _damageTimeout;
+        _animator.Play("Damage");
     }
 
+    public void Die()
+    {
+        _animator.Play("Die");
+        DeactivateController();
+    }
     #endregion
 }

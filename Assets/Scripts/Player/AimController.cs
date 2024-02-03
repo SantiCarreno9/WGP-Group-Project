@@ -20,13 +20,18 @@ public class AimController : MonoBehaviour
     private Collider[] _foundColliders = new Collider[5];
 
     private Transform _target = null;
+    private bool _aimEnabled = false;
 
     private void Start()
     {
         _boxCastCenter = transform.position + transform.forward * _boxCastCenterOffset.z;
     }
 
-    public void UpdateAimDirection()
+    public void EnableAim() => _aimEnabled = true;
+
+    public void DisableAim() => _aimEnabled = false;
+
+    private void UpdateAimDirection()
     {
         DetectEnemies();
         if (_hitDetect)
@@ -35,8 +40,6 @@ public class AimController : MonoBehaviour
             Vector3 aimAngle = _autoAim.localEulerAngles;
             float horizontalAngle = (aimAngle.y > 180) ? Mathf.Abs(360 - aimAngle.y) : aimAngle.y;
             float verticalAngle = (aimAngle.x > 180) ? Mathf.Abs(360 - aimAngle.x) : aimAngle.x;
-
-            Debug.Log("Horizontal: " + horizontalAngle + " Vertical: " + verticalAngle);
 
             if (horizontalAngle <= _maxHorizontalAngle && verticalAngle <= _maxVerticalAngle)
                 _aimCenter.localRotation = _autoAim.localRotation;
@@ -81,7 +84,8 @@ public class AimController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        UpdateAimDirection();
+        if (_aimEnabled)
+            UpdateAimDirection();
     }
 
     //void OnDrawGizmos()

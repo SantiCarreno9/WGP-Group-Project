@@ -10,13 +10,10 @@ public class PhysicsProjectile : Projectile
         _rigidbody.AddForce(transform.forward * speed, ForceMode.Acceleration);
     }
 
-    private void FixedUpdate()
+    private void OnTriggerEnter(Collider other)
     {
-        //if (_shoot)
-        //{
-        //    _rigidbody.AddForce(_direction * speed, ForceMode.Acceleration);
-        //    _shoot = false;
-        //}
+        if (other.TryGetComponent(out IHealth target))
+            HitTarget(target);
     }
 
     protected override void Deactivate()

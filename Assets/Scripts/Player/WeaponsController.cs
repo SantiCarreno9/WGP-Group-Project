@@ -10,19 +10,17 @@ public class WeaponsController : MonoBehaviour
     [SerializeField] private Transform _spawnPosition;
 
     [Tooltip("Time between shots")]
-    [SerializeField] private float _cooldown = 0.1f;
+    [SerializeField] private float _cooldown = 0.3f;
+    [SerializeField] private float _continuousCooldown = 0.3f;
 
     private IObjectPool<Projectile> _projectilePool;
 
-    [SerializeField] private bool _collectionCheck = true;
+    private bool _collectionCheck = true;
 
     [SerializeField] private int _defaultCapacity = 10;
-    [SerializeField] private int _maxSize = 20;
-
-    [SerializeField] private AimController _aimController;
+    [SerializeField] private int _maxSize = 20;    
 
     private float _nextTimeToShoot = 0;
-
 
     private void Awake()
     {
@@ -55,8 +53,7 @@ public class WeaponsController : MonoBehaviour
     {
         if (Time.time < _nextTimeToShoot)
             return;
-
-        _aimController.UpdateAimDirection();
+        
         Projectile projectile = _projectilePool.Get();
 
         if (projectile == null)
@@ -67,5 +64,4 @@ public class WeaponsController : MonoBehaviour
         projectile.StartDeactivationTimer();
         _nextTimeToShoot = Time.time + _cooldown;
     }
-
 }

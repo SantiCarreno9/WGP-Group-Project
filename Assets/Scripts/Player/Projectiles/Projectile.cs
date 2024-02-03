@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] protected float speed = 20f;
     [SerializeField] protected float timeOutDelay = 3f;
+    [SerializeField] private int _damagePoints = 10;
 
 
     private IObjectPool<Projectile> _objectPool;
@@ -29,5 +30,10 @@ public class Projectile : MonoBehaviour
     protected virtual void Deactivate()
     {
         _objectPool.Release(this);
+    }
+
+    protected void HitTarget(IHealth target)
+    {
+        target.Damage(_damagePoints);
     }
 }
