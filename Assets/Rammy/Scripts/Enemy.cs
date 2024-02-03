@@ -14,9 +14,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] float attackRadius;
     [SerializeField] LayerMask playerLayer;
     [SerializeField] float damagePerSecond;
+    [SerializeField] float disappearTimeAfterDeath;
     EnemyState enemyState = EnemyState.Idle;
     public int Health { get; private set; } = 100;
     float attackCooldown = 0;
+    bool isDead;
     private void Awake()
     {
         agent.enabled = false;
@@ -28,6 +30,11 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (isDead)
+        {
+            return;
+        }
+
         UpdateAttackCooldown();
         UpdateStateBehavior();
         EnemyState newState = GetNewState();
@@ -102,7 +109,11 @@ public class Enemy : MonoBehaviour
 
     void HandleDeath()
     {
-        Destroy(gameObject);
+        isDead = true;
+        animator.SetBool("isDead", true);
+        GetComponent<Collider>().enabled = false;
+        agent.enabled = false;
+        Destroy(gameObject, disappearTimeAfterDeath);
     }
 
     void UpdateAttackCooldown()
