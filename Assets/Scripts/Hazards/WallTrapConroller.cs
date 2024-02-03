@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class WallTrapConroller : MonoBehaviour
 {
+    [SerializeField] AudioSource audioPlayer;
+    [SerializeField] AudioClip splat;
+    void Splat()
+    {
+        audioPlayer.clip = splat;
+        audioPlayer.Play();
+    }
+
     [SerializeField] private float _timeDelay;
     private Transform[] _children;
 
@@ -48,7 +56,9 @@ public class WallTrapConroller : MonoBehaviour
         {
             _children[i].gameObject.SetActive(true);
             yield return new WaitForSeconds(_timeDelay);
+            Splat();
         }
+        isEnabling = false;
 
         yield return new WaitForSeconds(_timeDelay + 4);
         DisableAllChildren();
