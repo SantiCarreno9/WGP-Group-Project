@@ -13,16 +13,16 @@ TagManager:
   - UI
   - Ground
   - Enemy
+  - Player
+  - Arrow
+  - PlayerEnemyDetection
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - GroundRammy
+  - PlayerRammy
+  - PlayerArrowRammy
   - 
   - 
   - 
