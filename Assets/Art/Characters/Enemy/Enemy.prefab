@@ -106,14 +106,19 @@ MonoBehaviour:
   agent: {fileID: 5357891519381713934}
   player: {fileID: 0}
   collider: {fileID: 2815400033467367440}
+  skinnedMeshRenderer: {fileID: 0}
   speed: 5
   detectionRadius: 5
   attackRadius: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 1024
-  damagePerSecond: 0
+  damageAfterCooldown: 0
+  attackCooldown: 0
   deathTime: 3
+  hitEffectDuration: 0
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  hitColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!195 &5357891519381713934
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -343,13 +348,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3167787711667951376, guid: 379d128e1a071ae48a2275dc5345973f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8653788625613418497}
   m_SourcePrefab: {fileID: 100100000, guid: 379d128e1a071ae48a2275dc5345973f, type: 3}
 --- !u!4 &1583815688378501064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2359304078957252010, guid: 379d128e1a071ae48a2275dc5345973f, type: 3}
   m_PrefabInstance: {fileID: 3839100383643126370}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2211556961148575090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3167787711667951376, guid: 379d128e1a071ae48a2275dc5345973f, type: 3}
+  m_PrefabInstance: {fileID: 3839100383643126370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8653788625613418497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211556961148575090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1276ac98d9fd9479551345c0442913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemy: {fileID: 1425280243745018606}
 --- !u!95 &4835453327640632754 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8529186968664102864, guid: 379d128e1a071ae48a2275dc5345973f, type: 3}
