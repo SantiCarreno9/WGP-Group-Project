@@ -5,17 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DeathZone : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Function to detect when player falls down and die, so it sends to the GameOverScreen
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
