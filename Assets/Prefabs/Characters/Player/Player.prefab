@@ -170,7 +170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3602600430311604552}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
   m_LocalPosition: {x: 0, y: 1.489, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -192,7 +192,6 @@ GameObject:
   - component: {fileID: 6818053046005717818}
   - component: {fileID: 3573862780059152583}
   - component: {fileID: 4916320600199229110}
-  - component: {fileID: 7892555763754841894}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -231,14 +230,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca33c6d1cfa68d49a63e9237a968c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _characterController: {fileID: 3638213703871173947}
   _avatar: {fileID: 0}
-  _walkingSpeed: 5
-  _runningSpeed: 8
+  _walkingSpeed: 4
+  _runningSpeed: 7
   _rotatingSpeed: 1
   _gravityMultiplier: 1
-  _jumpHeight: 10
+  _jumpHeight: 7
   _damageTimeout: 1
   _animator: {fileID: 0}
+  _maxHealthPoints: 100
   _attackController: {fileID: 4916320600199229110}
 --- !u!143 &3638213703871173947
 CharacterController:
@@ -281,7 +282,6 @@ MonoBehaviour:
   _projectilePrefab: {fileID: 550784884268911729, guid: 6885dbc4ec9987e489210c8c3b726608, type: 3}
   _spawnPosition: {fileID: 4706978957780854559}
   _cooldown: 0.2
-  _continuousCooldown: 0.3
   _defaultCapacity: 10
   _maxSize: 20
 --- !u!114 &6818053046005717818
@@ -320,7 +320,7 @@ MonoBehaviour:
   _aimRig: {fileID: 0}
   _handRigTarget: {fileID: 0}
   _shootingPoint: {fileID: 4706978957780854559}
-  _transitionDuration: 0.2
+  _transitionDuration: 0.1
 --- !u!114 &4916320600199229110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,20 +336,6 @@ MonoBehaviour:
   _aimController: {fileID: 6818053046005717818}
   _avatarRigController: {fileID: 3573862780059152583}
   _weaponController: {fileID: 8054817343080858158}
---- !u!114 &7892555763754841894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6744994462966574078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea255890f2aee0e4cbb6064921b97cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHealthPoints: 200
-  _playerController: {fileID: 383022686195685589}
 --- !u!1 &8562263234681998371
 GameObject:
   m_ObjectHideFlags: 0

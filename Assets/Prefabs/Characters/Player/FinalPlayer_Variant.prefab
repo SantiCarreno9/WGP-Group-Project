@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b342d8ce5c2fd48b8fa3147d48d1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 1
+  m_Weight: 0
   m_Effectors:
   - m_Transform: {fileID: 7282810246856114674}
     m_Style:
@@ -275,7 +275,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinalPlayer_Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7892555763754841894, guid: e75965e35333dd346a4814506dd279e5, type: 3}
+      propertyPath: _maxHealthPoints
+      value: 100
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7892555763754841894, guid: e75965e35333dd346a4814506dd279e5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 321784642796245881, guid: e75965e35333dd346a4814506dd279e5, type: 3}

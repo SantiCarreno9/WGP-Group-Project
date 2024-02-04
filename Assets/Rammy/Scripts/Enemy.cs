@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IHealth
 {
     [SerializeField] Animator animator;
     [SerializeField] NavMeshAgent agent;
@@ -15,14 +12,20 @@ public class Enemy : MonoBehaviour
     [SerializeField] float detectionRadius;
     [SerializeField] float attackRadius;
     [SerializeField] LayerMask playerLayer;
-    [SerializeField] float damagePerSecond;
+    [SerializeField] int damageAfterCooldown;
+    [SerializeField] float attackCooldown;
     [SerializeField] float deathTime;
     [SerializeField] float hitEffectDuration;
     [SerializeField] Color defaultColor;
     [SerializeField] Color hitColor;
+
+    private IHealth playerHealth;
     EnemyState enemyState = EnemyState.Idle;
     public int Health { get; private set; } = 100;
-    float attackCooldown = 0;
+
+    public int HealthPoints => Health;
+
+    float attackCooldownTimer = 0;
     bool isDead;
     float hitEffectTimer = 0;
     private void Awake()
@@ -30,17 +33,23 @@ public class Enemy : MonoBehaviour
         agent.enabled = false;
         agent.speed = speed;
         agent.stoppingDistance = attackRadius;
-        agent.autoBraking = true;
+        agent.autoBraking = true;        
+    }
+
+    private void Start()
+    {
+        player = GameManager.Instance.Player.transform;
+        playerHealth = player.GetComponent<IHealth>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(isDead) return;
-        if(hitEffectTimer > 0)
+        if (isDead) return;
+        if (hitEffectTimer > 0)
         {
             hitEffectTimer -= Time.fixedDeltaTime;
-            if(hitEffectTimer <= 0)
+            if (hitEffectTimer <= 0)
             {
                 hitEffectTimer = 0;
                 skinnedMeshRenderer.material.color = defaultColor;
@@ -49,11 +58,11 @@ public class Enemy : MonoBehaviour
         UpdateAttackCooldown();
         UpdateStateBehavior();
         EnemyState newState = GetNewState();
-        if(enemyState == newState)
+        if (enemyState == newState)
         {
             return;
         }
-        SetState(newState);        
+        SetState(newState);
     }
 
     bool IsPlayerVisible()
@@ -86,7 +95,7 @@ public class Enemy : MonoBehaviour
 
     void SetState(EnemyState newState)
     {
-        switch(newState)
+        switch (newState)
         {
             case EnemyState.Idle:
                 agent.enabled = false;
@@ -114,7 +123,7 @@ public class Enemy : MonoBehaviour
         skinnedMeshRenderer.material.color = hitColor;
         hitEffectTimer = hitEffectDuration;
         Health -= damage;
-        if(Health <= 0)
+        if (Health <= 0)
         {
             Health = 0;
             HandleDeath();
@@ -132,10 +141,10 @@ public class Enemy : MonoBehaviour
 
     void UpdateAttackCooldown()
     {
-        attackCooldown -= Time.fixedDeltaTime;
-        if (attackCooldown < 0)
+        attackCooldownTimer -= Time.fixedDeltaTime;
+        if (attackCooldownTimer < 0)
         {
-            attackCooldown = 0;
+            attackCooldownTimer = 0;
         }
     }
 
@@ -148,12 +157,22 @@ public class Enemy : MonoBehaviour
         if (enemyState == EnemyState.Attacking)
         {
             transform.forward = (player.position - transform.position).normalized;
-            if (attackCooldown <= 0)
+            if (attackCooldownTimer <= 0)
             {
                 //damage player
-                attackCooldown = 1;
+                //playerHealth.Damage(damageAfterCooldown);
+                attackCooldownTimer = attackCooldown;
             }
         }
+    }
+
+    public void DamageCharacter()
+    {
+        if (enemyState != EnemyState.Attacking)
+        {
+            return;
+        }
+        playerHealth.Damage(damageAfterCooldown);
     }
 
     private void OnDrawGizmos()
