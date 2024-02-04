@@ -1,3 +1,11 @@
+/* GameManager.cs
+ * Author: Ramandeep Singh
+ * Student Number: 301364879
+ * Last modified: 02/04/2024
+ * 
+ * This script controls the minimap camera
+ * 
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

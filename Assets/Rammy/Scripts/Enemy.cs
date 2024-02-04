@@ -1,3 +1,12 @@
+/* GameManager.cs
+ * Author: Ramandeep Singh
+ * Student Number: 301364879
+ * Last modified: 02/04/2024
+ * 
+ * This script controls the Enemy
+ * 
+ */
+using SlimUI.ModernMenu;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -18,7 +27,9 @@ public class Enemy : MonoBehaviour, IHealth
     [SerializeField] float hitEffectDuration;
     [SerializeField] Color defaultColor;
     [SerializeField] Color hitColor;
-
+    AudioSource audioSource;
+    [SerializeField] AudioClip hitSoundClip;
+    [SerializeField] AudioClip deathSoundClip;
     private IHealth playerHealth;
     EnemyState enemyState = EnemyState.Idle;
     public int Health { get; private set; } = 100;
@@ -33,7 +44,9 @@ public class Enemy : MonoBehaviour, IHealth
         agent.enabled = false;
         agent.speed = speed;
         agent.stoppingDistance = attackRadius;
-        agent.autoBraking = true;        
+        agent.autoBraking = true;    
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = hitSoundClip;
     }
 
     private void Start()
@@ -55,7 +68,7 @@ public class Enemy : MonoBehaviour, IHealth
                 skinnedMeshRenderer.material.color = defaultColor;
             }
         }
-        UpdateAttackCooldown();
+        //UpdateAttackCooldown();
         UpdateStateBehavior();
         EnemyState newState = GetNewState();
         if (enemyState == newState)
@@ -65,6 +78,7 @@ public class Enemy : MonoBehaviour, IHealth
         SetState(newState);
     }
 
+    //checks if player is in range and is visible
     bool IsPlayerVisible()
     {
         Vector3 diff = player.position - transform.position;
@@ -72,11 +86,13 @@ public class Enemy : MonoBehaviour, IHealth
             Physics.Raycast(transform.position, diff.normalized, detectionRadius, playerLayer);
     }
 
+    //checks if player is in attack state
     bool IsPlayerInAttackRange()
     {
         return (player.position - transform.position).magnitude <= attackRadius;
     }
 
+    //Gets the state that the enemy should be in
     EnemyState GetNewState()
     {
         bool isPlayerVisible = IsPlayerVisible();
@@ -93,6 +109,7 @@ public class Enemy : MonoBehaviour, IHealth
         return EnemyState.Attacking;
     }
 
+    //sets the current state of the enemy and handles navmesgagent and animations accordingly
     void SetState(EnemyState newState)
     {
         switch (newState)
@@ -117,12 +134,14 @@ public class Enemy : MonoBehaviour, IHealth
         enemyState = newState;
     }
 
+    //Enemy takes damage
     public void Damage(int damage)
     {
         if (isDead) return;
         skinnedMeshRenderer.material.color = hitColor;
         hitEffectTimer = hitEffectDuration;
         Health -= damage;
+        audioSource.Play();
         if (Health <= 0)
         {
             Health = 0;
@@ -130,8 +149,11 @@ public class Enemy : MonoBehaviour, IHealth
         }
     }
 
+    //Handles enemy death
     void HandleDeath()
     {
+        audioSource.clip = deathSoundClip;
+        audioSource.Play();
         isDead = true;
         animator.SetBool("isDead", true);
         agent.enabled = false;
@@ -139,15 +161,16 @@ public class Enemy : MonoBehaviour, IHealth
         Destroy(gameObject, deathTime);
     }
 
-    void UpdateAttackCooldown()
+  /*  void UpdateAttackCooldown()
     {
         attackCooldownTimer -= Time.fixedDeltaTime;
         if (attackCooldownTimer < 0)
         {
             attackCooldownTimer = 0;
         }
-    }
+    }*/
 
+    //Performs an update logic based on current state
     void UpdateStateBehavior()
     {
         if (enemyState == EnemyState.Chasing)
@@ -157,15 +180,16 @@ public class Enemy : MonoBehaviour, IHealth
         if (enemyState == EnemyState.Attacking)
         {
             transform.forward = (player.position - transform.position).normalized;
-            if (attackCooldownTimer <= 0)
+            /*if (attackCooldownTimer <= 0)
             {
                 //damage player
                 //playerHealth.Damage(damageAfterCooldown);
                 attackCooldownTimer = attackCooldown;
-            }
+            }*/
         }
     }
 
+    //Damages player
     public void DamageCharacter()
     {
         if (enemyState != EnemyState.Attacking)
