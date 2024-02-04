@@ -14,6 +14,11 @@ public class PhysicsProjectile : Projectile
     {
         if (other.TryGetComponent(out IHealth target))
             HitTarget(target);
+
+        if(other.transform.root.TryGetComponent<Enemy>(out var enemy))
+        {
+            enemy.Damage(5);
+        }
     }
 
     protected override void Deactivate()

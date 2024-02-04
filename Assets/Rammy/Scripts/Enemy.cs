@@ -9,14 +9,22 @@ public class Enemy : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Transform player;
+    [SerializeField] Collider collider;
+    [SerializeField] SkinnedMeshRenderer skinnedMeshRenderer;
     [SerializeField] float speed;
     [SerializeField] float detectionRadius;
     [SerializeField] float attackRadius;
     [SerializeField] LayerMask playerLayer;
     [SerializeField] float damagePerSecond;
+    [SerializeField] float deathTime;
+    [SerializeField] float hitEffectDuration;
+    [SerializeField] Color defaultColor;
+    [SerializeField] Color hitColor;
     EnemyState enemyState = EnemyState.Idle;
     public int Health { get; private set; } = 100;
     float attackCooldown = 0;
+    bool isDead;
+    float hitEffectTimer = 0;
     private void Awake()
     {
         agent.enabled = false;
@@ -28,6 +36,16 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(isDead) return;
+        if(hitEffectTimer > 0)
+        {
+            hitEffectTimer -= Time.fixedDeltaTime;
+            if(hitEffectTimer <= 0)
+            {
+                hitEffectTimer = 0;
+                skinnedMeshRenderer.material.color = defaultColor;
+            }
+        }
         UpdateAttackCooldown();
         UpdateStateBehavior();
         EnemyState newState = GetNewState();
@@ -92,6 +110,9 @@ public class Enemy : MonoBehaviour
 
     public void Damage(int damage)
     {
+        if (isDead) return;
+        skinnedMeshRenderer.material.color = hitColor;
+        hitEffectTimer = hitEffectDuration;
         Health -= damage;
         if(Health <= 0)
         {
@@ -102,7 +123,11 @@ public class Enemy : MonoBehaviour
 
     void HandleDeath()
     {
-        Destroy(gameObject);
+        isDead = true;
+        animator.SetBool("isDead", true);
+        agent.enabled = false;
+        collider.enabled = false;
+        Destroy(gameObject, deathTime);
     }
 
     void UpdateAttackCooldown()
