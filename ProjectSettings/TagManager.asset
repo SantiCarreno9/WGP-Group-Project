@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Death
   layers:
   - Default
   - TransparentFX
@@ -11,18 +12,18 @@ TagManager:
   - 
   - Water
   - UI
+  - Ground
+  - Enemy
+  - Player
+  - Arrow
+  - PlayerEnemyDetection
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - GroundRammy
+  - PlayerRammy
+  - PlayerArrowRammy
   - 
   - 
   - 
