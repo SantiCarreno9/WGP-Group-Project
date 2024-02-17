@@ -191,6 +191,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 140796727482156869, guid: e75965e35333dd346a4814506dd279e5, type: 3}
+      propertyPath: _aimRig
+      value: 
+      objectReference: {fileID: 7745946664296316984}
+    - target: {fileID: 140796727482156869, guid: e75965e35333dd346a4814506dd279e5, type: 3}
+      propertyPath: _handRigTarget
+      value: 
+      objectReference: {fileID: 7940292516113213615}
     - target: {fileID: 321784642796245881, guid: e75965e35333dd346a4814506dd279e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -239,6 +247,14 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 5171675025902726}
+    - target: {fileID: 1056218929927415911, guid: e75965e35333dd346a4814506dd279e5, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 5171675025902726}
+    - target: {fileID: 1119899374080309433, guid: e75965e35333dd346a4814506dd279e5, type: 3}
+      propertyPath: _avatar
+      value: 
+      objectReference: {fileID: 6753609317797956678}
     - target: {fileID: 3573862780059152583, guid: e75965e35333dd346a4814506dd279e5, type: 3}
       propertyPath: _aimRig
       value: 
@@ -259,6 +275,14 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.57
       objectReference: {fileID: 0}
+    - target: {fileID: 4372309093239539623, guid: e75965e35333dd346a4814506dd279e5, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 5171675025902726}
+    - target: {fileID: 4776460528139857282, guid: e75965e35333dd346a4814506dd279e5, type: 3}
+      propertyPath: _avatar
+      value: 
+      objectReference: {fileID: 6753609317797956678}
     - target: {fileID: 5150239892478542133, guid: e75965e35333dd346a4814506dd279e5, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.67
@@ -279,6 +303,10 @@ PrefabInstance:
       propertyPath: _maxHealthPoints
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 9058954049818027883, guid: e75965e35333dd346a4814506dd279e5, type: 3}
+      propertyPath: _aimRig
+      value: 
+      objectReference: {fileID: 7745946664296316984}
     m_RemovedComponents:
     - {fileID: 7892555763754841894, guid: e75965e35333dd346a4814506dd279e5, type: 3}
     m_RemovedGameObjects: []
