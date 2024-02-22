@@ -21,15 +21,15 @@ namespace Character
         [Header("Animations")]
         [SerializeField] private Animator _animator;
 
-        private int _animRotating = Animator.StringToHash("rotation");
+        private int _animRotation = Animator.StringToHash("rotation");
         private int _animForward = Animator.StringToHash("forward");
-        private int _animIsMoving = Animator.StringToHash("isMoving");
         private int _animIsJumping = Animator.StringToHash("isJumping");
         private int _animIsGrounded = Animator.StringToHash("isGrounded");
         private int _animIsFalling = Animator.StringToHash("isFalling");
         private int _animIsGettingHit = Animator.StringToHash("GetHit");
+        private int _animIsGettingDamage = Animator.StringToHash("IsGettingDamage");
 
-        private Vector2 _movement = Vector2.zero;
+        private Vector2 _gradualMovement = Vector2.zero;
 
         private void OnEnable()
         {
@@ -53,21 +53,20 @@ namespace Character
         /// </summary>
         private void UpdateAnimations()
         {
-            //float multiplier = (!_movementController.IsRunning ? 0.5f : _speed / _walkingSpeed);
-            float multiplier = (!_movementController.IsSprinting() ? 0.5f : 1);
-            _movement.x = _movementController.GetMovementDirection().x * 0.5f;
-            _movement.y = Mathf.Abs(_movementController.GetMovementDirection().y * multiplier);
+            _gradualMovement = _movementController.GetGradualMovement();            
+            _gradualMovement.y = Mathf.Abs(_gradualMovement.y);
 
-            _animator.SetBool(_animIsMoving, _movementController.IsMoving);
-            _animator.SetFloat(_animRotating, _movement.x);
-            _animator.SetFloat(_animForward, _movement.y);
+            _animator.SetFloat(_animRotation, _gradualMovement.x);
+            _animator.SetFloat(_animForward, _gradualMovement.y);
             _animator.SetBool(_animIsFalling, _movementController.IsFalling);
             _animator.SetBool(_animIsGrounded, _movementController.IsGrounded);
             _animator.SetBool(_animIsJumping, _movementController.IsJumping);
+
+            _healthModule.SetReceivingDamageState(_animator.GetBool(_animIsGettingDamage));
         }
-        
+
         public void Damage() => _animator.SetTrigger(_animIsGettingHit);
-        
+
         public void Die() => _animator.Play("Die");
     }
 }

@@ -11,12 +11,14 @@ using UnityEngine.Events;
 
 namespace Character
 {
-    public class HealthModule : MonoBehaviour
+    public class HealthModule : MonoBehaviour, IHealth
     {
         [SerializeField] private int _maxHealthPoints = 200;
         [SerializeField] private float _damageTimeout = 0.2f;
         public int HealthPoints { get; private set; }
         private float _recoveryTime = 0f;
+        private bool _isReceivingDamage = false;
+        public bool IsReceivingDamage => _isReceivingDamage;
 
         public UnityAction OnDamageReceived;
         public UnityAction OnHealthRestored;
@@ -27,7 +29,7 @@ namespace Character
         {
             HealthPoints = _maxHealthPoints;
         }
-       
+
         public void Restore(int points)
         {
             HealthPoints = points;
@@ -54,7 +56,9 @@ namespace Character
             }
         }
 
-        public bool IsReceivingDamage() => Time.time < _recoveryTime;
+        //public bool IsReceivingDamage() => Time.time < _recoveryTime;
+
+        public void SetReceivingDamageState(bool state) => _isReceivingDamage = state;
 
         /// <summary>
         /// Plays the dead animation and disables the controls

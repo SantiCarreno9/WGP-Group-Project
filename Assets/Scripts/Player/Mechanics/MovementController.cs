@@ -18,51 +18,44 @@ namespace Character
         [SerializeField] private GameObject _avatar;
 
         [Header("Movements")]
-        [SerializeField] private float _walkingSpeed = 5f;
-        [SerializeField] private float _runningSpeed = 7f;
-        [SerializeField] private float _rotatingSpeed = 1f;
+        [SerializeField] private float _walkingSpeed = 1f;
+        [SerializeField] private float _rotatingSpeed = 0.3f;
         [SerializeField] private float _gravityMultiplier = 2f;
         [SerializeField] private float _jumpHeight = 2.0f;
-        private float _speed = 0;
+        private float _walkSpeedMultiplier = 1;
+        private float _rotateSpeedMultiplier = 1;
         private const float _gravity = -9.8f;
+        private Vector2 _gradualMovement = Vector2.zero;
 
         [Header("Sprint")]
-        [SerializeField] private float _sprintSpeed = 12f;
+        [SerializeField] private float _sprintWalkSpeedMultiplier = 2f;
+        [SerializeField] private float _sprintRotateSpeedMultiplier = 2f;
         [SerializeField] private float _sprintDuration = 2.0f;
         [SerializeField] private float _sprintRecoveryRate = 0.5f;
 
         private float _sprintRemainingTime = 0;
         private bool _isSprinting = false;
 
-        public bool IsMoving { get; private set; } = false;
         public bool IsGrounded { get; private set; } = false;
         public bool IsJumping { get; private set; } = false;
         public bool IsFalling { get; private set; } = false;
         private float _yVelocity = 0;
         private Vector3 _movement;
 
-        private bool _interactionsEnabled = true;
-
 
         void Awake()
         {
-            //Initializes variables            
-            _speed = _walkingSpeed;
+            //Initializes variables                        
             _sprintRemainingTime = _sprintDuration;
         }
 
         public Vector2 GetMovementDirection() => _movementInputs;
-
+        public Vector2 GetGradualMovement() => _gradualMovement;
 
         private void Update()
         {
-            //Allows to control the user as long as it's not receiving damage or 
-            //the interactions are enabled
-            //if (_interactionsEnabled /*&&*/ /*!IsGettingHit()*/)
-            {
-                Move();
-                UpdateSprintUsage();
-            }
+            Move();
+            UpdateSprintUsage();
         }
 
         /// <summary>
@@ -73,17 +66,20 @@ namespace Character
         {
             _movementInputs = movementInputs;
             UpdateAvatarOrientation();
-            IsMoving = (movementInputs != Vector2.zero);
         }
 
         private void Move()
         {
-            if (_isSprinting && CanSprint())
-                _speed = _sprintSpeed;
-            else _speed = _walkingSpeed;
+            _walkSpeedMultiplier = (_isSprinting && CanSprint()) ? _sprintWalkSpeedMultiplier : 1;
+            _rotateSpeedMultiplier = (_isSprinting && CanSprint()) ? _rotateSpeedMultiplier : 1;
+                        
+            _gradualMovement.x = Mathf.SmoothStep(_gradualMovement.x, _movementInputs.x, 0.1f);
+            _gradualMovement.y = Mathf.SmoothStep(_gradualMovement.y, _movementInputs.y * _walkSpeedMultiplier, 0.2f);
+            //_gradualMovement.y = Mathf.SmoothStep(_gradualMovement.y, _movementInputs.y, 0.2f);
 
-            //Calculates the movement vector
-            _movement = transform.forward * _movementInputs.y * _speed;
+            //Calculates the movement vector            
+            //_movement = transform.forward * _gradualMovement.y * _walkingSpeed * _walkSpeedMultiplier;
+            _movement = transform.forward * _gradualMovement.y * _walkingSpeed;
             IsGrounded = _characterController.isGrounded;
 
             //Triggers different states according to the user y velocity and grounded status
@@ -100,9 +96,10 @@ namespace Character
             }
 
             _movement.y = _yVelocity;
+
             //Moves the character controller according to the input received
             _characterController.Move(_movement * Time.deltaTime);
-            _characterController.transform.Rotate(Vector3.up * _rotatingSpeed * _movementInputs.x, Space.Self);
+            _characterController.transform.Rotate(Vector3.up * _rotatingSpeed * _walkSpeedMultiplier * _gradualMovement.x, Space.Self);
         }
 
         public bool IsMovingBackwards() => _movementInputs.y < 0;
@@ -130,7 +127,7 @@ namespace Character
 
         #region SPRINT
 
-        public bool IsSprinting() => _isSprinting && _movementInputs.magnitude != 0;
+        public bool IsSprinting() => _walkSpeedMultiplier == _sprintWalkSpeedMultiplier;
 
         public void StartSprinting() => _isSprinting = true;
 
@@ -138,7 +135,7 @@ namespace Character
 
         private void UpdateSprintUsage()
         {
-            if (IsSprinting())
+            if (_isSprinting && _movementInputs.magnitude != 0)
             {
                 if (_sprintRemainingTime > 0)
                     _sprintRemainingTime -= Time.fixedDeltaTime;

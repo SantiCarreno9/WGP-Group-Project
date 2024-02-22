@@ -24,8 +24,13 @@ public class AimController : MonoBehaviour
     [SerializeField] private Vector3 _boxCastHalfSize = Vector3.one;
     [SerializeField] private LayerMask _targetLayer;
 
+    [Header("Raycast")]
+    [SerializeField] private LayerMask _obstacleLayer;
+
     private Vector3 _boxCastCenter;
     private bool _targetFound = false;
+    private Ray _ray;
+    private RaycastHit _hit;
     private Collider[] _foundColliders = new Collider[5];
 
     private Transform _target = null;
@@ -82,18 +87,26 @@ public class AimController : MonoBehaviour
         if (_targetFound)
         {
             float minDistance = float.MaxValue;
+            float distance;
             int colliderIndex = -1;
             for (int i = 0; i < _foundColliders.Length; i++)
             {
                 if (_foundColliders[i] == null)
                     break;
 
-                float distance = Vector3.Distance(transform.position, _foundColliders[i].transform.position);
+                distance = Vector3.Distance(transform.position, _foundColliders[i].transform.position);
                 if (distance < minDistance)
                 {
                     minDistance = distance;
                     colliderIndex = i;
                 }
+            }
+
+            Vector3 direction = _foundColliders[colliderIndex].transform.position - _aimCenter.position;
+            if (Physics.Raycast(_aimCenter.position, direction, minDistance, _obstacleLayer.value))
+            {
+                _targetFound = false;
+                return;
             }
             _target = _foundColliders[colliderIndex].transform;
             System.Array.Clear(_foundColliders, 0, 5);

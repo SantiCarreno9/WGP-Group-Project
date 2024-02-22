@@ -22,11 +22,12 @@ namespace Character
         private PlayerInputs _inputs;
 
         public Transform Transform => transform;
+        public HealthModule HealthModule => _healthModule;
 
         private void Awake()
         {
             //Creates a new instance of the PlayerInputs class and subscribes to the events of the user inputs
-            _inputs = new PlayerInputs();
+            _inputs = new PlayerInputs();            
 
             #region PLAYER ACTION MAP
 
@@ -62,7 +63,9 @@ namespace Character
         /// <param name="obj"></param>
         private void Move_performed(InputAction.CallbackContext obj)
         {
-            if (GameManager.Instance.IsGamePaused())
+            //if (GameManager.Instance.IsGamePaused())
+            //    return;
+            if (HealthModule.IsReceivingDamage)
                 return;
 
             _movementController.SetUserMovementInput(obj.ReadValue<Vector2>());
@@ -74,15 +77,17 @@ namespace Character
         /// <param name="obj"></param>
         private void Move_canceled(InputAction.CallbackContext obj)
         {
-            if (GameManager.Instance.IsGamePaused())
-                return;
+            //if (GameManager.Instance.IsGamePaused())
+            //    return;
 
             _movementController.SetUserMovementInput(Vector2.zero);
         }
 
         private void Run_performed(InputAction.CallbackContext obj)
         {
-            if (GameManager.Instance.IsGamePaused())
+            //if (GameManager.Instance.IsGamePaused())
+            //    return;
+            if (HealthModule.IsReceivingDamage)
                 return;
 
             _movementController.StartSprinting();
@@ -90,15 +95,18 @@ namespace Character
 
         private void Run_canceled(InputAction.CallbackContext obj)
         {
-            if (GameManager.Instance.IsGamePaused())
-                return;
+            //if (GameManager.Instance.IsGamePaused())
+            //    return;
 
             _movementController.StopSprinting();
         }
 
         private void Jump_performed(InputAction.CallbackContext obj)
         {
-            if (GameManager.Instance.IsGamePaused())
+            //if (GameManager.Instance.IsGamePaused())
+            //    return;
+
+            if (HealthModule.IsReceivingDamage)
                 return;
 
             _movementController.Jump();
@@ -113,10 +121,10 @@ namespace Character
         /// <param name="obj"></param>
         private void Fire_performed(InputAction.CallbackContext obj)
         {
-            if (GameManager.Instance.IsGamePaused())
-                return;
+            //if (GameManager.Instance.IsGamePaused())
+            //    return;
 
-            if (_healthModule.IsReceivingDamage() || _movementController.IsMovingBackwards())
+            if (_healthModule.IsReceivingDamage || _movementController.IsMovingBackwards())
                 return;
 
             _attackController.StartAttacking();
@@ -128,8 +136,8 @@ namespace Character
         /// <param name="obj"></param>
         private void Fire_canceled(InputAction.CallbackContext obj)
         {
-            if (GameManager.Instance.IsGamePaused())
-                return;
+            //if (GameManager.Instance.IsGamePaused())
+            //    return;
 
             _attackController.StopAttacking();
         }
@@ -138,8 +146,8 @@ namespace Character
 
         #endregion
 
-        private void EnablePlayerActionMap() => _inputs.Player.Enable();
-        private void DisablePlayerActionMap() => _inputs.Player.Disable();
+        public void EnablePlayerActionMap() => _inputs.Player.Enable();
+        public void DisablePlayerActionMap() => _inputs.Player.Disable();
 
         private void Die()
         {

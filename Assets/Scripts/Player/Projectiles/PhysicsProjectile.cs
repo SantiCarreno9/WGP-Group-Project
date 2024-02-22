@@ -30,10 +30,9 @@ public class PhysicsProjectile : Projectile
     {
         Transform parent = other.transform.parent;
         if (parent && parent.TryGetComponent(out IHealth target))
-        {
             HitTarget(target);
-            Deactivate();
-        }
+
+        Deactivate();
     }
 
     /// <summary>

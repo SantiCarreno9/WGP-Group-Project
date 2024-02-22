@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour, IHealth
     private void Start()
     {
         player = GameManager.Instance.Player.transform;
-        playerHealth = player.GetComponent<IHealth>();
+        playerHealth = player.GetComponentInChildren<IHealth>();
     }
 
     // Update is called once per frame
