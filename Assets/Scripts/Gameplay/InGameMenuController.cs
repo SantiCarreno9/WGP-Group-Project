@@ -6,12 +6,14 @@
  * This script opens the proper UI according to the user's inputs
  * 
  */
+using Character;
 using UnityEngine;
 
 public class InGameMenuController : MonoBehaviour
 {
     private PlayerInputs _inputs;
     [SerializeField] private InGameUIManager _inGameUIManager;
+    private PlayerController _controller;
 
     private bool _isInventoryOpen = false;
 
@@ -21,6 +23,11 @@ public class InGameMenuController : MonoBehaviour
         _inputs = new PlayerInputs();
         _inputs.Menu.Pause.performed += Pause_performed;
         _inputs.Menu.Inventory.performed += Inventory_performed;
+    }
+
+    private void Start()
+    {
+        _controller = FindObjectOfType<PlayerController>();
     }
 
     /// <summary>
@@ -60,6 +67,8 @@ public class InGameMenuController : MonoBehaviour
     {
         Time.timeScale = 1;
         _inGameUIManager.closePauseCanvas();
+        if (_controller != null)
+            _controller.EnablePlayerActionMap();
     }
 
     /// <summary>
@@ -68,7 +77,9 @@ public class InGameMenuController : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0;
-        _inGameUIManager.displayPauseCanvas();        
+        _inGameUIManager.displayPauseCanvas();
+        if (_controller != null)
+            _controller.DisablePlayerActionMap();
     }
 
     private void OnEnable() => _inputs.Enable();

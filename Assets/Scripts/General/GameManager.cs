@@ -6,14 +6,15 @@
  * This script saves the reference of the player and displays the Game Over screen
  * 
  */
+using Character;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    [SerializeField] private GameObject _player;
-    public GameObject Player => _player;
+    [SerializeField] private PlayerController _playerController;
+    public GameObject Player => _playerController.gameObject;
 
     public bool IsGamePaused() => Time.timeScale == 0;
 
@@ -21,6 +22,16 @@ public class GameManager : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
+    }
+
+    private void OnEnable()
+    {
+        _playerController.HealthModule.OnDie += ShowGameOverScreen;
+    }
+
+    private void OnDisable()
+    {
+        _playerController.HealthModule.OnDie -= ShowGameOverScreen;
     }
 
     public void ShowGameOverScreen()

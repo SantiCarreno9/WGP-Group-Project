@@ -1,3 +1,4 @@
+using Character.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class InGameUIManager : MonoBehaviour
 {
-    [SerializeField] GameObject GUI;
+    [SerializeField] private PlayerStatsView GUI;
     [SerializeField] GameObject pauseCanva;
     [SerializeField] GameObject inventoryCanva;
     [SerializeField] AudioSource audioSource;
@@ -15,21 +16,21 @@ public class InGameUIManager : MonoBehaviour
     //Acttivate the GUI at the beggining and desactivate the pause & inventory canvas
     private void Awake()
     {
-        GUI.SetActive(true);
+        GUI.ShowStats();
         pauseCanva.SetActive(false);
         inventoryCanva.SetActive(false);
     }    
     //Display the Pause Canvas
     public void displayPauseCanvas()
     {
-        GUI.SetActive(false);
+        GUI.HideStats();
         pauseCanva.SetActive(true);
     }
     //Close the Pause Canvas
     public void closePauseCanvas()
     {
         pauseCanva.SetActive(false);
-        GUI.SetActive(true);
+        GUI.ShowStats();
     }
     //Close the Inventory Canvas
     public void closeInventoryCanvas()

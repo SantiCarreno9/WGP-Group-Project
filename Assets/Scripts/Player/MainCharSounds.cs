@@ -11,7 +11,7 @@ public class MainCharSounds : MonoBehaviour
     [SerializeField] AudioClip[] jumpAudio;
     [SerializeField] AudioClip[] attackingAudio;
 
-    void playStep() {
+    void Step() {
         audioPlayer.clip = stepAudio[Random.Range(0, stepAudio.Length)];
         audioPlayer.Play();
     }
@@ -22,7 +22,7 @@ public class MainCharSounds : MonoBehaviour
         audioPlayer.Play();
     }
 
-    void dying()
+    void Dead()
     {
         audioPlayer.clip = deathAudio[Random.Range(0, deathAudio.Length)];
         audioPlayer.Play();
