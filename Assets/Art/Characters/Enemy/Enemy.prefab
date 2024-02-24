@@ -114,14 +114,14 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 1024
-  damageAfterCooldown: 0
-  attackCooldown: 0
+  damageAfterCooldown: 20
+  attackCooldown: 1.07
   deathTime: 3
-  hitEffectDuration: 0
-  defaultColor: {r: 0, g: 0, b: 0, a: 0}
-  hitColor: {r: 0, g: 0, b: 0, a: 0}
-  hitSoundClip: {fileID: 0}
-  deathSoundClip: {fileID: 0}
+  hitEffectDuration: 0.5
+  defaultColor: {r: 0.74509805, g: 0.64705884, b: 0.53333336, a: 0}
+  hitColor: {r: 1, g: 0.08235294, b: 0, a: 0}
+  enemyHitSoundName: enemyHit
+  enemyDeathSoundName: enemyDeath
 --- !u!195 &5357891519381713934
 NavMeshAgent:
   m_ObjectHideFlags: 0
