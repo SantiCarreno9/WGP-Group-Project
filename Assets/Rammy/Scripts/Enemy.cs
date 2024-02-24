@@ -28,8 +28,8 @@ public class Enemy : MonoBehaviour, IHealth
     [SerializeField] Color defaultColor;
     [SerializeField] Color hitColor;
     AudioSource audioSource;
-    [SerializeField] AudioClip hitSoundClip;
-    [SerializeField] AudioClip deathSoundClip;
+    [SerializeField] string enemyHitSoundName;
+    [SerializeField] string enemyDeathSoundName;
     private IHealth playerHealth;
     EnemyState enemyState = EnemyState.Idle;
     public int Health { get; private set; } = 100;
@@ -46,7 +46,6 @@ public class Enemy : MonoBehaviour, IHealth
         agent.stoppingDistance = attackRadius;
         agent.autoBraking = true;    
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = hitSoundClip;
     }
 
     private void Start()
@@ -141,6 +140,7 @@ public class Enemy : MonoBehaviour, IHealth
         skinnedMeshRenderer.material.color = hitColor;
         hitEffectTimer = hitEffectDuration;
         Health -= damage;
+        AudioManager.Instance.PlayAsset(enemyHitSoundName, audioSource);
         audioSource.Play();
         if (Health <= 0)
         {
@@ -152,7 +152,7 @@ public class Enemy : MonoBehaviour, IHealth
     //Handles enemy death
     void HandleDeath()
     {
-        audioSource.clip = deathSoundClip;
+        AudioManager.Instance.PlayAsset(enemyDeathSoundName, audioSource);
         audioSource.Play();
         isDead = true;
         animator.SetBool("isDead", true);
@@ -179,7 +179,10 @@ public class Enemy : MonoBehaviour, IHealth
         }
         if (enemyState == EnemyState.Attacking)
         {
-            transform.forward = (player.position - transform.position).normalized;
+            Vector3 diff = player.position - transform.position;
+            diff.y = 0;
+            diff.Normalize();
+            transform.forward = diff;
             /*if (attackCooldownTimer <= 0)
             {
                 //damage player
