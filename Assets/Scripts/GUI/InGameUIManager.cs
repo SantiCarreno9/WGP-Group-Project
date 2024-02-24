@@ -9,6 +9,7 @@ public class InGameUIManager : MonoBehaviour
     [SerializeField] GameObject pauseCanva;
     [SerializeField] GameObject inventoryCanva;
     [SerializeField] GameObject saveGameCanva;
+    [SerializeField] GameObject loadGameCanva;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip clickSound;
     [SerializeField] AudioClip hoverSound;
@@ -20,6 +21,7 @@ public class InGameUIManager : MonoBehaviour
         pauseCanva.SetActive(false);
         inventoryCanva.SetActive(false);
         saveGameCanva.SetActive(false);
+        loadGameCanva.SetActive(false);
     }    
     //Display the Pause Canvas
     public void displayPauseCanvas()
@@ -56,6 +58,18 @@ public class InGameUIManager : MonoBehaviour
     {
         pauseCanva.SetActive(false);
         saveGameCanva.SetActive(true);
+    }
+    //Close the LoadGame Canvas
+    public void closeLoadGameCanvas()
+    {
+        loadGameCanva.SetActive(false);
+        pauseCanva.SetActive(true);
+    }
+    //Open the LoadGame Canvas
+    public void openLoadGameCanvas()
+    {
+        pauseCanva.SetActive(false);
+        loadGameCanva.SetActive(true);
     }
     //Sends to Main Menu
     public void ReturnMainMenu()
