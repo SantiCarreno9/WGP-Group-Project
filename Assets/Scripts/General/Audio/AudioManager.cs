@@ -5,20 +5,19 @@ public class AudioManager : PersistentSingleton<AudioManager>
 {
     [SerializeField] private List<AudioAsset> _audioAssets;
 
-    public AudioAsset GetSFX(string name)
+    private AudioAsset GetAsset(string name)
     {
         AudioAsset asset = null;
         asset = _audioAssets.Find(x => x.name == name);
         return asset;
     }
 
-    public void PlaySFX(string name, AudioSource audioSource)
+    public void PlayAsset(string name, AudioSource audioSource)
     {
-        AudioAsset asset = null;
-        asset = GetSFX(name);
+        var asset = GetAsset(name);
         if (asset != null)
         {
-            AudioAsset.SetConfig(asset, audioSource);
+            asset.ApplyConfigToAudioSource(audioSource);
             audioSource.Play();
         }
     }
