@@ -734,13 +734,18 @@ MonoBehaviour:
   _characterController: {fileID: 3638213703871173947}
   _avatar: {fileID: 0}
   _walkingSpeed: 1
-  _rotatingSpeed: 0.7
-  _gravityMultiplier: 1
-  _jumpHeight: 7
+  _rotatingSpeed: 0.4
+  _gravityMultiplier: 2
+  _jumpHeight: 12
   _sprintWalkSpeedMultiplier: 3
   _sprintRotateSpeedMultiplier: 1.7
-  _sprintDuration: 10
+  _sprintDuration: 20
   _sprintRecoveryRate: 0.5
+  _groundCheck: {fileID: 8580389027054825455}
+  _groundRadius: 0.5
+  _groundMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &6175060279775898083
 GameObject:
   m_ObjectHideFlags: 0

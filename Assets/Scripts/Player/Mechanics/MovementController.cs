@@ -15,7 +15,7 @@ namespace Character
 
         [Header("Character Controller")]
         [SerializeField] private CharacterController _characterController;
-        [SerializeField] private GameObject _avatar;
+        [SerializeField] private GameObject _avatar;        
 
         [Header("Movements")]
         [SerializeField] private float _walkingSpeed = 1f;
@@ -32,6 +32,11 @@ namespace Character
         [SerializeField] private float _sprintRotateSpeedMultiplier = 2f;
         [SerializeField] private float _sprintDuration = 2.0f;
         [SerializeField] private float _sprintRecoveryRate = 0.5f;
+
+        [Header("Ground Detection")]
+        [SerializeField] private Transform _groundCheck;
+        [SerializeField] private float _groundRadius = 0.5f;
+        [SerializeField] private LayerMask _groundMask;        
 
         private float _sprintRemainingTime = 0;
         private bool _isSprinting = false;
@@ -58,6 +63,11 @@ namespace Character
             UpdateSprintUsage();
         }
 
+        private void FixedUpdate()
+        {
+            IsGrounded = Physics.CheckSphere(_groundCheck.position, _groundRadius, _groundMask);
+        }
+
         /// <summary>
         /// Reads the movement input and updates the avatar orientation
         /// </summary>
@@ -79,8 +89,7 @@ namespace Character
 
             //Calculates the movement vector            
             //_movement = transform.forward * _gradualMovement.y * _walkingSpeed * _walkSpeedMultiplier;
-            _movement = transform.forward * _gradualMovement.y * _walkingSpeed;
-            IsGrounded = _characterController.isGrounded;
+            _movement = transform.forward * _gradualMovement.y * _walkingSpeed;            
 
             //Triggers different states according to the user y velocity and grounded status
             if (IsGrounded && _yVelocity < 0.0f)
