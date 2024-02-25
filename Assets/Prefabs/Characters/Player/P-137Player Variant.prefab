@@ -584,6 +584,10 @@ PrefabInstance:
       propertyPath: _avatar
       value: 
       objectReference: {fileID: 2628795112225841916}
+    - target: {fileID: 1119899374080309433, guid: e75965e35333dd346a4814506dd279e5, type: 3}
+      propertyPath: _groundMask.m_Bits
+      value: 192
+      objectReference: {fileID: 0}
     - target: {fileID: 3638213703871173947, guid: e75965e35333dd346a4814506dd279e5, type: 3}
       propertyPath: m_Height
       value: 1.1

@@ -396,7 +396,7 @@ Transform:
   m_GameObject: {fileID: 2043977988748547876}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.116, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -742,10 +742,11 @@ MonoBehaviour:
   _sprintDuration: 20
   _sprintRecoveryRate: 0.5
   _groundCheck: {fileID: 8580389027054825455}
-  _groundRadius: 0.5
-  _groundMask:
+  _groundRadius: 0.1
+  _surfaceDetectionLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
+  _pushForce: 0.5
 --- !u!1 &6175060279775898083
 GameObject:
   m_ObjectHideFlags: 0

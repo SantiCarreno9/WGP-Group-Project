@@ -15,7 +15,7 @@ namespace Character
 
         [Header("Character Controller")]
         [SerializeField] private CharacterController _characterController;
-        [SerializeField] private GameObject _avatar;        
+        [SerializeField] private GameObject _avatar;
 
         [Header("Movements")]
         [SerializeField] private float _walkingSpeed = 1f;
@@ -36,7 +36,11 @@ namespace Character
         [Header("Ground Detection")]
         [SerializeField] private Transform _groundCheck;
         [SerializeField] private float _groundRadius = 0.5f;
-        [SerializeField] private LayerMask _groundMask;        
+        [SerializeField] private LayerMask _surfaceDetectionLayer;
+
+        [Header("Additional")]
+        [Tooltip("Force used to push the character when stepping on an enemy")]
+        [SerializeField] private float _pushForce = 0.5f;
 
         private float _sprintRemainingTime = 0;
         private bool _isSprinting = false;
@@ -65,7 +69,19 @@ namespace Character
 
         private void FixedUpdate()
         {
-            IsGrounded = Physics.CheckSphere(_groundCheck.position, _groundRadius, _groundMask);
+            //_isGrounded = Physics.CheckSphere(_groundCheck.position, _groundRadius, _groundMask);
+            //IsGrounded = _characterController.isGrounded;
+            if (Physics.SphereCast(_groundCheck.position, _groundRadius, Vector3.down, out RaycastHit hitInfo, _groundRadius + 0.05f, _surfaceDetectionLayer))
+            {                            
+                IsGrounded = ((1 << hitInfo.collider.gameObject.layer) & LayerMask.GetMask("Enemy")) == 0;
+                if (!IsGrounded)
+                {
+                    Push();
+                }
+                return;
+            }
+
+            IsGrounded = false;
         }
 
         /// <summary>
@@ -82,14 +98,14 @@ namespace Character
         {
             _walkSpeedMultiplier = (_isSprinting && CanSprint()) ? _sprintWalkSpeedMultiplier : 1;
             _rotateSpeedMultiplier = (_isSprinting && CanSprint()) ? _rotateSpeedMultiplier : 1;
-                        
+
             _gradualMovement.x = Mathf.SmoothStep(_gradualMovement.x, _movementInputs.x, 0.1f);
             _gradualMovement.y = Mathf.SmoothStep(_gradualMovement.y, _movementInputs.y * _walkSpeedMultiplier, 0.2f);
             //_gradualMovement.y = Mathf.SmoothStep(_gradualMovement.y, _movementInputs.y, 0.2f);
 
             //Calculates the movement vector            
             //_movement = transform.forward * _gradualMovement.y * _walkingSpeed * _walkSpeedMultiplier;
-            _movement = transform.forward * _gradualMovement.y * _walkingSpeed;            
+            _movement = transform.forward * _gradualMovement.y * _walkingSpeed;
 
             //Triggers different states according to the user y velocity and grounded status
             if (IsGrounded && _yVelocity < 0.0f)
@@ -132,6 +148,11 @@ namespace Character
                 _yVelocity += _jumpHeight;
                 IsJumping = true;
             }
+        }
+
+        private void Push()
+        {
+            _characterController.Move(-_characterController.transform.forward * _pushForce);
         }
 
         #region SPRINT
