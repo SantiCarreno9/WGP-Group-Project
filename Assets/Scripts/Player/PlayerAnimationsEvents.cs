@@ -6,7 +6,7 @@ namespace Character
     {
         [SerializeField] private PlayerSoundsController _soundsController;
         [SerializeField] private Animator _animator;
-        private int _animBlendTree = Animator.StringToHash("IsRunningBlendTree");
+        private int _animBlendTree = Animator.StringToHash("IsPlayingBlendTree");
 
         private void Step(AnimationEvent animationEvent)
         {            

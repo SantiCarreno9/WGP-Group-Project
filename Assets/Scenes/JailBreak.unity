@@ -185,6 +185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -241,6 +245,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
       propertyPath: m_Name
       value: SquareRamp1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -339,6 +347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -400,6 +412,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -480,6 +496,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece2Floor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -551,6 +571,10 @@ PrefabInstance:
     - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
       propertyPath: m_Name
       value: OpieceInside (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -649,6 +673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -718,6 +746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece2Floor (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -777,6 +809,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 65af28300de881946bc43bd25e8994b9, type: 3}
       propertyPath: m_Name
       value: OpieceInside (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65af28300de881946bc43bd25e8994b9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -842,6 +878,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -917,6 +957,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece2Floor (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -977,6 +1021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1033,6 +1081,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1095,6 +1147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rpiece (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1154,6 +1210,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1254,6 +1314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1310,6 +1374,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1379,6 +1447,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
       propertyPath: m_Name
       value: Opiece2Floor (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1472,6 +1544,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1537,6 +1613,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
       propertyPath: m_Name
       value: Rpiece (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1634,6 +1714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rpiece (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1726,6 +1810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rpiece (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1785,6 +1873,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1910,6 +2002,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (82)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1978,6 +2074,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
       propertyPath: m_Name
       value: Opiece2Floor (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2127,6 +2227,10 @@ PrefabInstance:
     - target: {fileID: 4177465525766279292, guid: eeafb87a24a3a1247875793f3e405c43, type: 3}
       propertyPath: m_Name
       value: Opiece (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177465525766279292, guid: eeafb87a24a3a1247875793f3e405c43, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2333,6 +2437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4177465525766279292, guid: eeafb87a24a3a1247875793f3e405c43, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2441,6 +2549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rpiece (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2513,6 +2625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece2Floor (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2572,6 +2688,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2635,6 +2755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2681,7 +2805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 496191018}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RoomObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2937,6 +3061,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpieceInside (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2956,6 +3084,10 @@ PrefabInstance:
     - target: {fileID: 3459974840020929931, guid: 528c142693f58b9429406e98372dc2ac, type: 3}
       propertyPath: m_Name
       value: Epiece
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459974840020929931, guid: 528c142693f58b9429406e98372dc2ac, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4273806531646773041, guid: 528c142693f58b9429406e98372dc2ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3063,6 +3195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rpiece (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3086,6 +3222,10 @@ PrefabInstance:
     - target: {fileID: 8223095871898093473, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
       propertyPath: m_Name
       value: Lpiece (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223095871898093473, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8743068576627809563, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
       propertyPath: m_LocalScale.y
@@ -3153,6 +3293,10 @@ PrefabInstance:
     - target: {fileID: 8223095871898093473, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
       propertyPath: m_Name
       value: Lpiece
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223095871898093473, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8743068576627809563, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3256,6 +3400,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3312,6 +3460,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3442,6 +3594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3498,6 +3654,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3570,6 +3730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rpiece (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3629,6 +3793,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
       propertyPath: m_Name
       value: SquareRamp2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3725,6 +3893,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
       propertyPath: m_Name
       value: Rpiece (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3830,6 +4002,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece2Floor (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3934,6 +4110,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece2Floor (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3997,6 +4177,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
       propertyPath: m_Name
       value: Rpiece (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4062,6 +4246,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4134,6 +4322,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4209,6 +4401,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpieceInside (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4268,6 +4464,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (80)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4358,6 +4558,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4414,6 +4618,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4508,6 +4716,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4614,6 +4826,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
       propertyPath: m_Name
       value: Opiece2Floor (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4823,6 +5039,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (81)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4879,6 +5099,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4948,6 +5172,10 @@ PrefabInstance:
     - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
       propertyPath: m_Name
       value: OpieceInside (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5021,6 +5249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece2Floor (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5085,6 +5317,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5187,6 +5423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece2Floor (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5257,6 +5497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SquareRamp2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5273,10 +5517,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 169066762930285503, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
-      propertyPath: m_StepOffset
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 2277228717538152155, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
       propertyPath: m_Name
       value: GameplayBasics
@@ -5285,9 +5525,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3120625000955775116, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 3770102401763126781, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.646
       objectReference: {fileID: 0}
     - target: {fileID: 3931752074762399484, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5329,49 +5569,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4589031445963916861, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
-      propertyPath: _jumpHeight
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4589031445963916861, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
-      propertyPath: _rotatingSpeed
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4589031445963916861, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
-      propertyPath: _sprintDuration
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4589031445963916861, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
-      propertyPath: _gravityMultiplier
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4589031445963916861, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
-      propertyPath: _sprintRotateSpeedMultiplier
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5924565877305403794, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.04
-      objectReference: {fileID: 0}
     - target: {fileID: 5924565877305403794, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.70759916
+      value: -0.001401186
       objectReference: {fileID: 0}
-    - target: {fileID: 5924565877305403794, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -13.94836
+    - target: {fileID: 8469378664887691633, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
+      propertyPath: m_Height
+      value: 1.1569082
       objectReference: {fileID: 0}
-    - target: {fileID: 9214077543127638048, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.04
+    - target: {fileID: 8469378664887691633, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
+      propertyPath: m_Center.y
+      value: 0.54384094
       objectReference: {fileID: 0}
     - target: {fileID: 9214077543127638048, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.70759916
-      objectReference: {fileID: 0}
-    - target: {fileID: 9214077543127638048, guid: 799c7def83efb5b46b64896c2d22e3e5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -13.94836
+      value: -0.001401186
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5434,6 +5646,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5504,6 +5720,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpieceInside (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5563,6 +5783,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5773,6 +5997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rpiece (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5865,6 +6093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5926,6 +6158,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6030,6 +6266,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6137,6 +6377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece2Floor (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6234,6 +6478,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6286,6 +6534,10 @@ PrefabInstance:
     - target: {fileID: 8223095871898093473, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
       propertyPath: m_Name
       value: Lpiece
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223095871898093473, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8743068576627809563, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
       propertyPath: m_LocalScale.y
@@ -6512,6 +6764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6574,6 +6830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6630,6 +6890,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6704,6 +6968,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
       propertyPath: m_Name
       value: Opiece2Floor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6780,6 +7048,10 @@ PrefabInstance:
     - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
       propertyPath: m_Name
       value: OpieceInside (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6873,6 +7145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6934,6 +7210,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7004,6 +7284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece2Floor (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7063,6 +7347,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7132,6 +7420,10 @@ PrefabInstance:
     - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
       propertyPath: m_Name
       value: OpieceInside (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7273,6 +7565,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (70)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7335,6 +7631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7391,6 +7691,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7453,6 +7757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rpiece (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7461,6 +7769,72 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1640555934}
   m_SourcePrefab: {fileID: 100100000, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+--- !u!1 &1158593824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1158593826}
+  - component: {fileID: 1158593825}
+  - component: {fileID: 1158593827}
+  m_Layer: 0
+  m_Name: DeathZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1158593825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158593824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9cc26d0c0f4d5438aac7d348fbe0ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1158593826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158593824}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.8, y: -3, z: 9.2}
+  m_LocalScale: {x: 47.55, y: 1, z: 42.9}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1158593827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158593824}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1165828629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7512,6 +7886,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
       propertyPath: m_Name
       value: SquareRamp2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7605,6 +7983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SquareRamp1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7697,6 +8079,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7765,6 +8151,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
       propertyPath: m_Name
       value: Opiece2Floor (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7878,6 +8268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4177465525766279292, guid: eeafb87a24a3a1247875793f3e405c43, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7935,6 +8329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7991,6 +8389,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
       propertyPath: m_Name
       value: SquareRamp1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8072,6 +8474,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
       propertyPath: m_Name
       value: Opiece2Floor (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8185,6 +8591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4177465525766279292, guid: eeafb87a24a3a1247875793f3e405c43, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8262,6 +8672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4177465525766279292, guid: eeafb87a24a3a1247875793f3e405c43, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8318,6 +8732,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8387,6 +8805,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
       propertyPath: m_Name
       value: Opiece2Floor (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8510,6 +8932,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8566,6 +8992,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8661,6 +9091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8717,6 +9151,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8785,6 +9223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EpieceRoof (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5699513513814260326, guid: 4086419acfc2b3640acf9b5a167001e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8810,6 +9252,10 @@ PrefabInstance:
     - target: {fileID: 8223095871898093473, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
       propertyPath: m_Name
       value: Lpiece (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223095871898093473, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8743068576627809563, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
       propertyPath: m_LocalScale.y
@@ -9009,6 +9455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9113,6 +9563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpieceInside (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9181,6 +9635,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
       propertyPath: m_Name
       value: Rpiece (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9337,6 +9795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9399,6 +9861,10 @@ PrefabInstance:
     - target: {fileID: 8223095871898093473, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
       propertyPath: m_Name
       value: Lpiece (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223095871898093473, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8743068576627809563, guid: 139d06283e1bcd648b9396b3c7d83b66, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9501,6 +9967,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9665,6 +10135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9725,6 +10199,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
       propertyPath: m_Name
       value: Rpiece (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9796,6 +10274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9857,6 +10339,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9930,6 +10416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9986,6 +10476,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
       propertyPath: m_Name
       value: SquareRamp2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10046,6 +10540,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10108,6 +10606,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10197,6 +10699,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (67)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10339,6 +10845,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4177465525766279292, guid: eeafb87a24a3a1247875793f3e405c43, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10432,6 +10942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rpiece (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10504,6 +11018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpieceInside (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10564,6 +11082,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10620,6 +11142,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10714,6 +11240,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
       propertyPath: m_Name
       value: SquareRamp2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10811,6 +11341,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10910,6 +11444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rpiece (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10985,6 +11523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11046,6 +11588,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11109,6 +11655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11122,6 +11672,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 947126930855155439, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: OnAreaExit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 947126930855155439, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: OnAreaExit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2423894174849539902, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.0849876
@@ -11161,6 +11719,26 @@ PrefabInstance:
     - target: {fileID: 2423894174849539902, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043722511462546285, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.015724016
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043722511462546285, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: m_Size.z
+      value: 0.010000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043722511462546285, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0028620106
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043722511462546285, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: m_Center.y
+      value: 2.3609528e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043722511462546285, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: m_Center.z
+      value: -8.239377e-14
       objectReference: {fileID: 0}
     - target: {fileID: 8392365157551014243, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
       propertyPath: m_Name
@@ -11265,13 +11843,13 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.45
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -11405,6 +11983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11461,6 +12043,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
       propertyPath: m_Name
       value: SquareRamp2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11645,6 +12231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SquareRamp1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11709,6 +12299,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
       propertyPath: m_Name
       value: Rpiece
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11775,6 +12369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rpiece (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11834,6 +12432,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
       propertyPath: m_Name
       value: SquareRamp1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11895,6 +12497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11951,6 +12557,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12028,6 +12638,10 @@ PrefabInstance:
     - target: {fileID: 4177465525766279292, guid: eeafb87a24a3a1247875793f3e405c43, type: 3}
       propertyPath: m_Name
       value: Opiece (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177465525766279292, guid: eeafb87a24a3a1247875793f3e405c43, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12118,6 +12732,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SquareRamp2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12183,6 +12801,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12240,6 +12862,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SquareRamp1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12248,6 +12874,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1033297966}
   m_SourcePrefab: {fileID: 100100000, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
+--- !u!114 &1879649512 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7322553838283574635, guid: e64c8117906706845b7a024bad11c04d, type: 3}
+  m_PrefabInstance: {fileID: 2497455862233623848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9171e9179ce86a648a33ca38cc687723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1881693315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12299,6 +12936,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
       propertyPath: m_Name
       value: SquareRamp2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fea13b2cfc4541641a5580d7602356f8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12409,6 +13050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece2Floor (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12472,6 +13117,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
       propertyPath: m_Name
       value: Rpiece (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12629,6 +13278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12691,6 +13344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (77)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12747,6 +13404,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
       propertyPath: m_Name
       value: SquareRamp1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12852,6 +13513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece2Floor (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12912,6 +13577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12968,6 +13637,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13061,6 +13734,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
       propertyPath: m_Name
       value: Rpiece (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13171,6 +13848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpieceInside (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13231,6 +13912,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13287,6 +13972,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
       propertyPath: m_Name
       value: SquareRamp1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59d581753fa0d924e94af5dfdb7ab296, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13379,6 +14068,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13491,6 +14184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpieceInside (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13551,6 +14248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13607,6 +14308,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13709,6 +14414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece2Floor (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a2b168c5da741146bd1962fad7cba2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13790,6 +14499,10 @@ PrefabInstance:
       value: Opiece (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4177465525766279292, guid: eeafb87a24a3a1247875793f3e405c43, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177465525766279292, guid: eeafb87a24a3a1247875793f3e405c43, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -13849,6 +14562,10 @@ PrefabInstance:
     - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
       propertyPath: m_Name
       value: TheCube (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13941,6 +14658,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpieceInside (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4250503334848134191, guid: 17e6397811e29b64a927db99a1ed9b5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14004,6 +14725,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
       propertyPath: m_Name
       value: Rpiece (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14069,6 +14794,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
       propertyPath: m_Name
       value: Rpiece (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46795032c92fc246ae91b8ab58b74d0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14207,6 +14936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14274,6 +15007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14287,6 +15024,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 947126930855155439, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: OnAreaExit.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1879649512}
+    - target: {fileID: 947126930855155439, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: OnAreaExit.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: LevelTransitionController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2423894174849539902, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.01869
@@ -14327,9 +15072,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2947652383858461918, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327050273373001381, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: OnAreaExit.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327050273373001381, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: OnAreaExit.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327050273373001381, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: OnAreaExit.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1879649512}
+    - target: {fileID: 4327050273373001381, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: OnAreaExit.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327050273373001381, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: OnAreaExit.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GoToNextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327050273373001381, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: OnAreaExit.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: LevelTransitionController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327050273373001381, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: OnAreaExit.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043722511462546285, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.016643425
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043722511462546285, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.024999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043722511462546285, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0033217135
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881936343607482015, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8392365157551014243, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
       propertyPath: m_Name
       value: Elevator
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392365157551014243, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695355642432288820, guid: 7334fb8835bb0f74c8a01a56e857bf8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14388,6 +15189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EpieceRoof
       objectReference: {fileID: 0}
+    - target: {fileID: 5699513513814260326, guid: 4086419acfc2b3640acf9b5a167001e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14398,6 +15203,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4923399744427892956, guid: 4086419acfc2b3640acf9b5a167001e1, type: 3}
   m_PrefabInstance: {fileID: 2222138872600227468}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2497455862233623848
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5608496011161990701, guid: e64c8117906706845b7a024bad11c04d, type: 3}
+      propertyPath: m_Name
+      value: LevelTransitionController
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960628475422703830, guid: e64c8117906706845b7a024bad11c04d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960628475422703830, guid: e64c8117906706845b7a024bad11c04d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960628475422703830, guid: e64c8117906706845b7a024bad11c04d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960628475422703830, guid: e64c8117906706845b7a024bad11c04d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960628475422703830, guid: e64c8117906706845b7a024bad11c04d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960628475422703830, guid: e64c8117906706845b7a024bad11c04d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960628475422703830, guid: e64c8117906706845b7a024bad11c04d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960628475422703830, guid: e64c8117906706845b7a024bad11c04d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960628475422703830, guid: e64c8117906706845b7a024bad11c04d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960628475422703830, guid: e64c8117906706845b7a024bad11c04d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e64c8117906706845b7a024bad11c04d, type: 3}
 --- !u!1001 &5208413215324575501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14409,6 +15271,10 @@ PrefabInstance:
     - target: {fileID: 487013969216724392, guid: 29b6ae3ff99d53d4bad2e7680d05900f, type: 3}
       propertyPath: m_Name
       value: Opiece2Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 487013969216724392, guid: 29b6ae3ff99d53d4bad2e7680d05900f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 975566101945550610, guid: 29b6ae3ff99d53d4bad2e7680d05900f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14507,6 +15373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheCube (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3300586446237090664, guid: 33efa60cd5b2b7a4ab23d8330ee6184b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14584,6 +15454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opiece
       objectReference: {fileID: 0}
+    - target: {fileID: 4177465525766279292, guid: eeafb87a24a3a1247875793f3e405c43, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14601,3 +15475,5 @@ SceneRoots:
   - {fileID: 1769296006}
   - {fileID: 1348008186}
   - {fileID: 1323857124}
+  - {fileID: 2497455862233623848}
+  - {fileID: 1158593826}

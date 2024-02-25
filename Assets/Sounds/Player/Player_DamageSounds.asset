@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6274effe5da4fbc4bb56687747a09d74, type: 3}
-  m_Name: EnemyDeathSound
+  m_Name: Player_DamageSounds
   m_EditorClassIdentifier: 
-  name: 
-  clip: {fileID: 0}
+  Name: Player_Damage
+  clips:
+  - {fileID: 8300000, guid: 1129dc076cc321549987ff356b5a9af7, type: 3}
+  - {fileID: 8300000, guid: 525c7f85b97d9db4db4cc1c8ecc88e39, type: 3}
+  - {fileID: 8300000, guid: 338ed5a3d86b7e34496e815a26f3381d, type: 3}
   loop: 0
-  volume: 1
+  volume: 0.5
   pitch: 1

@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6274effe5da4fbc4bb56687747a09d74, type: 3}
-  m_Name: EnemyHitSound
+  m_Name: Player_AttackSounds
   m_EditorClassIdentifier: 
-  name: enemyHit
-  clip: {fileID: 8300000, guid: 5c8bef77669e8134690ee6088419041c, type: 3}
+  Name: Player_Attack
+  clips:
+  - {fileID: 8300000, guid: 09958c3850d46c34e82b6fd58e2f2927, type: 3}
   loop: 0
   volume: 1
   pitch: 1

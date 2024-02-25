@@ -396,7 +396,7 @@ Transform:
   m_GameObject: {fileID: 2043977988748547876}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.116, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -733,14 +733,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterController: {fileID: 3638213703871173947}
   _avatar: {fileID: 0}
-  _walkingSpeed: 1
-  _rotatingSpeed: 0.7
-  _gravityMultiplier: 1
-  _jumpHeight: 7
+  _walkingSpeed: 1.3
+  _rotatingSpeed: 0.4
+  _gravityMultiplier: 2
+  _jumpHeight: 12
   _sprintWalkSpeedMultiplier: 3
-  _sprintRotateSpeedMultiplier: 1.7
-  _sprintDuration: 10
+  _sprintRotateSpeedMultiplier: 0.7
+  _sprintDuration: 20
   _sprintRecoveryRate: 0.5
+  _groundCheck: {fileID: 8580389027054825455}
+  _groundRadius: 0.1
+  _surfaceDetectionLayer:
+    serializedVersion: 2
+    m_Bits: 192
+  _pushForce: 0.5
+  IsLanding: 0
 --- !u!1 &6175060279775898083
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,29 +939,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementAudioSource: {fileID: 173620923523328042}
-  _stepSounds:
-  - {fileID: 8300000, guid: bd084a78c41e98a498e1506f3cd6dc7e, type: 3}
-  _jumpSounds:
-  - {fileID: 8300000, guid: 17d3fcaf3790d3943a4a336dd5fb349f, type: 3}
-  - {fileID: 8300000, guid: a57b89e24a803e34aa0f01858376fbf3, type: 3}
+  _stepSoundsName: Player_Step
+  _jumpSoundsName: Player_Jump
   _attackAudioSource: {fileID: 2000985914211274400}
-  _attackSounds:
-  - {fileID: 8300000, guid: 09958c3850d46c34e82b6fd58e2f2927, type: 3}
+  _attackSoundsName: Player_Attack
   _healthAudioSource: {fileID: 280179244146889409}
-  _damageSounds:
-  - {fileID: 8300000, guid: 1129dc076cc321549987ff356b5a9af7, type: 3}
-  - {fileID: 8300000, guid: 525c7f85b97d9db4db4cc1c8ecc88e39, type: 3}
-  - {fileID: 8300000, guid: 338ed5a3d86b7e34496e815a26f3381d, type: 3}
-  _lowHealthSound: {fileID: 0}
-  _deadSounds:
-  - {fileID: 8300000, guid: d61d1df68d0c27a4a86f1f5e55a6e956, type: 3}
-  - {fileID: 8300000, guid: 56ecec14af8fedf4880447b6dcdd1723, type: 3}
-  - {fileID: 8300000, guid: 203534c27df26e2448b57e21358aa7b0, type: 3}
-  - {fileID: 8300000, guid: 35c814ca50ebd844aa95b891f320491a, type: 3}
-  - {fileID: 8300000, guid: 5103fdb14648e934eb0017eeac7fab5c, type: 3}
-  - {fileID: 8300000, guid: c02842186d2558d45937a6874475eb5a, type: 3}
-  _movementModule: {fileID: 0}
-  _attackModule: {fileID: 0}
+  _damageSoundsName: Player_Damage
+  _deathSoundsName: Player_Death
   _healthModule: {fileID: 0}
 --- !u!1 &8562263234681998371
 GameObject:

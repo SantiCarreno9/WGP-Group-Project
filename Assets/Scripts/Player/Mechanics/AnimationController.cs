@@ -21,13 +21,15 @@ namespace Character
         [Header("Animations")]
         [SerializeField] private Animator _animator;
 
-        private int _animRotation = Animator.StringToHash("rotation");
-        private int _animForward = Animator.StringToHash("forward");
-        private int _animIsJumping = Animator.StringToHash("isJumping");
-        private int _animIsGrounded = Animator.StringToHash("isGrounded");
-        private int _animIsFalling = Animator.StringToHash("isFalling");
+        private int _animRotation = Animator.StringToHash("Rotation");
+        private int _animForward = Animator.StringToHash("Forward");
+        private int _animIsRunning = Animator.StringToHash("IsSprinting");
+        private int _animIsJumping = Animator.StringToHash("IsJumping");
+        private int _animIsGrounded = Animator.StringToHash("IsGrounded");
+        private int _animIsFalling = Animator.StringToHash("IsFalling");
         private int _animIsGettingHit = Animator.StringToHash("GetHit");
         private int _animIsGettingDamage = Animator.StringToHash("IsGettingDamage");
+        private int _animIsLanding = Animator.StringToHash("IsLanding");
 
         private Vector2 _gradualMovement = Vector2.zero;
 
@@ -53,15 +55,19 @@ namespace Character
         /// </summary>
         private void UpdateAnimations()
         {
+            float speedMultiplier = _movementController.IsSprinting() ? 2 : 1;
             _gradualMovement = _movementController.GetGradualMovement();            
             _gradualMovement.y = Mathf.Abs(_gradualMovement.y);
 
-            _animator.SetFloat(_animRotation, _gradualMovement.x);
-            _animator.SetFloat(_animForward, _gradualMovement.y);
+            _animator.SetFloat(_animRotation, _gradualMovement.x * speedMultiplier);
+            _animator.SetFloat(_animForward, _gradualMovement.y * speedMultiplier);
+            _animator.SetBool(_animIsRunning, _movementController.IsSprinting());
             _animator.SetBool(_animIsFalling, _movementController.IsFalling);
             _animator.SetBool(_animIsGrounded, _movementController.IsGrounded);
             _animator.SetBool(_animIsJumping, _movementController.IsJumping);
+            _animator.SetBool(_animIsJumping, _movementController.IsJumping);
 
+            _movementController.IsLanding = _animator.GetBool(_animIsLanding);
             _healthModule.SetReceivingDamageState(_animator.GetBool(_animIsGettingDamage));
         }
 
