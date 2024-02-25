@@ -8,7 +8,7 @@ public class AudioManager : PersistentSingleton<AudioManager>
     private AudioAsset GetAsset(string name)
     {
         AudioAsset asset = null;
-        asset = _audioAssets.Find(x => x.name == name);
+        asset = _audioAssets.Find(x => x.Name == name);
         return asset;
     }
 

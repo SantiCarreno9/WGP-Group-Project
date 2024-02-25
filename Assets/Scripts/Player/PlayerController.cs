@@ -27,7 +27,7 @@ namespace Character
         private void Awake()
         {
             //Creates a new instance of the PlayerInputs class and subscribes to the events of the user inputs
-            _inputs = new PlayerInputs();            
+            _inputs = new PlayerInputs();
 
             #region PLAYER ACTION MAP
 
@@ -122,10 +122,14 @@ namespace Character
         private void Fire_performed(InputAction.CallbackContext obj)
         {
             //if (GameManager.Instance.IsGamePaused())
-            //    return;
+            //    return;            
 
-            if (_healthModule.IsReceivingDamage || _movementController.IsMovingBackwards())
+            if (_healthModule.IsReceivingDamage || _movementController.IsMovingBackwards()
+                || _movementController.IsJumping || _movementController.IsFalling)
+            {
+                _attackController.StopAttacking();
                 return;
+            }
 
             _attackController.StartAttacking();
         }

@@ -38,6 +38,7 @@ public class WallTrapConroller : MonoBehaviour
             isEnabling = true;
             StartCoroutine(EnableChildren());
         }
+        
     }
 
     private void OnTriggerExit(Collider other)
@@ -71,7 +72,6 @@ public class WallTrapConroller : MonoBehaviour
             _children[i].gameObject.SetActive(false);
             yield return new WaitForSeconds(_timeDelay);
         }
-
         isEnabling = false;
     }
 }

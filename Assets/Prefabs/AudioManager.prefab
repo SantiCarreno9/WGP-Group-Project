@@ -48,3 +48,7 @@ MonoBehaviour:
   _audioAssets:
   - {fileID: 11400000, guid: 16c9136a0fa63cb4a91420ffc4fb9076, type: 2}
   - {fileID: 11400000, guid: f913137c968ad704b94e1d9b7087c377, type: 2}
+  - {fileID: 11400000, guid: f1c7b667834e03e41a36f150e6245319, type: 2}
+  - {fileID: 11400000, guid: 9088c13ca57c60944b1d7e16ee57e86c, type: 2}
+  - {fileID: 11400000, guid: eabfce08d0a65304ba60dfe28043a19d, type: 2}
+  - {fileID: 11400000, guid: 8cd017311c1e9a44cbeef37a246be893, type: 2}

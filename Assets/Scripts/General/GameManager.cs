@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour
         Invoke("GameOver", 3);
     }
 
+    public void GoToLevel(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
     void GameOver()
     {
         SceneManager.LoadScene("GameOver");

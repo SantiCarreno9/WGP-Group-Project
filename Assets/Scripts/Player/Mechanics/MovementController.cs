@@ -47,7 +47,8 @@ namespace Character
 
         public bool IsGrounded { get; private set; } = false;
         public bool IsJumping { get; private set; } = false;
-        public bool IsFalling { get; private set; } = false;
+        public bool IsFalling { get; private set; } = false;        
+        public bool IsLanding = false;        
         private float _yVelocity = 0;
         private Vector3 _movement;
 
@@ -69,15 +70,12 @@ namespace Character
 
         private void FixedUpdate()
         {
-            //_isGrounded = Physics.CheckSphere(_groundCheck.position, _groundRadius, _groundMask);
-            //IsGrounded = _characterController.isGrounded;
             if (Physics.SphereCast(_groundCheck.position, _groundRadius, Vector3.down, out RaycastHit hitInfo, _groundRadius + 0.05f, _surfaceDetectionLayer))
-            {                            
+            {
                 IsGrounded = ((1 << hitInfo.collider.gameObject.layer) & LayerMask.GetMask("Enemy")) == 0;
                 if (!IsGrounded)
-                {
                     Push();
-                }
+
                 return;
             }
 
@@ -97,11 +95,10 @@ namespace Character
         private void Move()
         {
             _walkSpeedMultiplier = (_isSprinting && CanSprint()) ? _sprintWalkSpeedMultiplier : 1;
-            _rotateSpeedMultiplier = (_isSprinting && CanSprint()) ? _rotateSpeedMultiplier : 1;
+            _rotateSpeedMultiplier = (_isSprinting && CanSprint()) ? _sprintRotateSpeedMultiplier : 1;
 
-            _gradualMovement.x = Mathf.SmoothStep(_gradualMovement.x, _movementInputs.x, 0.1f);
+            _gradualMovement.x = Mathf.SmoothStep(_gradualMovement.x, _movementInputs.x * _rotateSpeedMultiplier, 0.1f);
             _gradualMovement.y = Mathf.SmoothStep(_gradualMovement.y, _movementInputs.y * _walkSpeedMultiplier, 0.2f);
-            //_gradualMovement.y = Mathf.SmoothStep(_gradualMovement.y, _movementInputs.y, 0.2f);
 
             //Calculates the movement vector            
             //_movement = transform.forward * _gradualMovement.y * _walkingSpeed * _walkSpeedMultiplier;
@@ -123,7 +120,8 @@ namespace Character
             _movement.y = _yVelocity;
 
             //Moves the character controller according to the input received
-            _characterController.Move(_movement * Time.deltaTime);
+            if (!IsLanding || IsSprinting())
+                _characterController.Move(_movement * Time.deltaTime);
             _characterController.transform.Rotate(Vector3.up * _rotatingSpeed * _walkSpeedMultiplier * _gradualMovement.x, Space.Self);
         }
 
@@ -143,7 +141,7 @@ namespace Character
         /// </summary>
         public void Jump()
         {
-            if (IsGrounded && !IsJumping)
+            if (IsGrounded && !IsJumping && !IsLanding)
             {
                 _yVelocity += _jumpHeight;
                 IsJumping = true;
@@ -165,7 +163,7 @@ namespace Character
 
         private void UpdateSprintUsage()
         {
-            if (_isSprinting && _movementInputs.magnitude != 0)
+            if (_isSprinting && _movementInputs.magnitude != 0 && !IsJumping)
             {
                 if (_sprintRemainingTime > 0)
                     _sprintRemainingTime -= Time.fixedDeltaTime;
