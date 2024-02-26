@@ -67,6 +67,10 @@ namespace Character
         {
             OnDie?.Invoke();
         }
+        public void SetHealth(int health)
+        {
+            HealthPoints = health;
+        }
 
         public int GetMaxHealth() => _maxHealthPoints;
         public bool HasMaxHealth() => (HealthPoints / GetMaxHealth()) == 1;

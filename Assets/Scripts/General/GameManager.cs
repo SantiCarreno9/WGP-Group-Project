@@ -7,6 +7,8 @@
  * 
  */
 using Character;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,7 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerController _playerController;
     public GameObject Player => _playerController.gameObject;
 
-    public bool IsGamePaused() => Time.timeScale == 0;
+    public bool IsGamePaused() => Time.timeScale == 0;    
 
     private void Awake()
     {
@@ -47,5 +49,20 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         SceneManager.LoadScene("GameOver");
+    }
+    public GameData GetCurrentGameData()
+    {
+        return new GameData() 
+        { 
+            levelNumber = SaveManager.GetLevelNumberFromBuildIndex(SceneManager.GetActiveScene().buildIndex),
+            playerHealth = _playerController.HealthModule.HealthPoints,
+            hasPosition = true,
+            playerPosition = Player.transform.position,
+        };
+    }
+    public static void LoadLevel(int levelNumber)
+    {
+        int buildIndex = SaveManager.GetBuildIndexFromLevelNumber(levelNumber);
+        SceneManager.LoadScene(buildIndex);
     }
 }
