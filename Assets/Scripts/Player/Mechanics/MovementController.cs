@@ -47,8 +47,8 @@ namespace Character
 
         public bool IsGrounded { get; private set; } = false;
         public bool IsJumping { get; private set; } = false;
-        public bool IsFalling { get; private set; } = false;        
-        public bool IsLanding = false;        
+        public bool IsFalling { get; private set; } = false;
+        public bool IsLanding = false;
         private float _yVelocity = 0;
         private Vector3 _movement;
 
@@ -62,14 +62,10 @@ namespace Character
         public Vector2 GetMovementDirection() => _movementInputs;
         public Vector2 GetGradualMovement() => _gradualMovement;
 
-        private void Update()
+        private void FixedUpdate()
         {
             Move();
             UpdateSprintUsage();
-        }
-
-        private void FixedUpdate()
-        {
             if (Physics.SphereCast(_groundCheck.position, _groundRadius, Vector3.down, out RaycastHit hitInfo, _groundRadius + 0.05f, _surfaceDetectionLayer))
             {
                 IsGrounded = ((1 << hitInfo.collider.gameObject.layer) & LayerMask.GetMask("Enemy")) == 0;
@@ -97,11 +93,10 @@ namespace Character
             _walkSpeedMultiplier = (_isSprinting && CanSprint()) ? _sprintWalkSpeedMultiplier : 1;
             _rotateSpeedMultiplier = (_isSprinting && CanSprint()) ? _sprintRotateSpeedMultiplier : 1;
 
-            _gradualMovement.x = Mathf.SmoothStep(_gradualMovement.x, _movementInputs.x * _rotateSpeedMultiplier, 0.1f);
-            _gradualMovement.y = Mathf.SmoothStep(_gradualMovement.y, _movementInputs.y * _walkSpeedMultiplier, 0.2f);
+            _gradualMovement.x = Mathf.SmoothStep(_gradualMovement.x, _movementInputs.x * _rotateSpeedMultiplier, 0.3f);
+            _gradualMovement.y = Mathf.SmoothStep(_gradualMovement.y, _movementInputs.y * _walkSpeedMultiplier, 0.3f);
 
             //Calculates the movement vector            
-            //_movement = transform.forward * _gradualMovement.y * _walkingSpeed * _walkSpeedMultiplier;
             _movement = transform.forward * _gradualMovement.y * _walkingSpeed;
 
             //Triggers different states according to the user y velocity and grounded status
@@ -114,15 +109,15 @@ namespace Character
             else
             {
                 IsFalling = true;
-                _yVelocity += _gravity * _gravityMultiplier * Time.deltaTime;
+                _yVelocity += _gravity * _gravityMultiplier * Time.fixedDeltaTime;
             }
 
             _movement.y = _yVelocity;
 
             //Moves the character controller according to the input received
             if (!IsLanding || IsSprinting())
-                _characterController.Move(_movement * Time.deltaTime);
-            _characterController.transform.Rotate(Vector3.up * _rotatingSpeed * _walkSpeedMultiplier * _gradualMovement.x, Space.Self);
+                _characterController.Move(_movement * Time.fixedDeltaTime);
+            _characterController.transform.Rotate(Vector3.up * _rotatingSpeed * _gradualMovement.x * Time.fixedDeltaTime, Space.Self);
         }
 
         public bool IsMovingBackwards() => _movementInputs.y < 0;
