@@ -38,8 +38,8 @@ namespace Character
 
             _inputs.Player.Jump.performed += Jump_performed;
 
-            _inputs.Player.Fire.performed += Fire_performed;
-            _inputs.Player.Fire.canceled += Fire_canceled;
+            _inputs.Player.Attack.performed += Attack_performed;
+            _inputs.Player.Attack.canceled += Attack_canceled;
             #endregion
 
             _healthModule.OnDie += Die;
@@ -56,56 +56,70 @@ namespace Character
 
         #region USER INPUTS EVENTS
 
+        #region MOVEMENT        
+        private void Move_performed(InputAction.CallbackContext obj) => HandleMovementInputPerformed(obj.ReadValue<Vector2>());
+        
+        private void Move_canceled(InputAction.CallbackContext obj) => HandleMovementInputCanceled();
+
+        private void Run_performed(InputAction.CallbackContext obj) => HandleSprintInputPerformed();
+
+        private void Run_canceled(InputAction.CallbackContext obj) => HandleSprintInputCanceled();
+
+        private void Jump_performed(InputAction.CallbackContext obj) => HandleJumpInputPerformed();
+
+        #endregion
+
+        #region ATTACK        
+        private void Attack_performed(InputAction.CallbackContext obj) => HandleAttackInputPerformed();
+        
+        private void Attack_canceled(InputAction.CallbackContext obj) => HandleAttackInputCanceled();
+
+        #endregion        
+
+        #endregion
+
+        public void EnablePlayerActionMap() => _inputs.Player.Enable();
+        public void DisablePlayerActionMap() => _inputs.Player.Disable();
+
+        #region PUBLIC METHODS
+
         #region MOVEMENT
         /// <summary>
         /// Reads the movement input and updates the avatar orientation
         /// </summary>
         /// <param name="obj"></param>
-        private void Move_performed(InputAction.CallbackContext obj)
+        public void HandleMovementInputPerformed(Vector2 value)
         {
-            //if (GameManager.Instance.IsGamePaused())
-            //    return;
             if (HealthModule.IsReceivingDamage)
                 return;
 
-            _movementController.SetUserMovementInput(obj.ReadValue<Vector2>());
+            _movementController.SetUserMovementInput(value);
         }
 
         /// <summary>
         /// Resets the movement Vector and updates the avatar orientation
         /// </summary>
         /// <param name="obj"></param>
-        private void Move_canceled(InputAction.CallbackContext obj)
+        public void HandleMovementInputCanceled()
         {
-            //if (GameManager.Instance.IsGamePaused())
-            //    return;
-
             _movementController.SetUserMovementInput(Vector2.zero);
         }
 
-        private void Run_performed(InputAction.CallbackContext obj)
+        public void HandleSprintInputPerformed()
         {
-            //if (GameManager.Instance.IsGamePaused())
-            //    return;
             if (HealthModule.IsReceivingDamage)
                 return;
 
             _movementController.StartSprinting();
         }
 
-        private void Run_canceled(InputAction.CallbackContext obj)
+        public void HandleSprintInputCanceled()
         {
-            //if (GameManager.Instance.IsGamePaused())
-            //    return;
-
             _movementController.StopSprinting();
         }
 
-        private void Jump_performed(InputAction.CallbackContext obj)
+        public void HandleJumpInputPerformed()
         {
-            //if (GameManager.Instance.IsGamePaused())
-            //    return;
-
             if (HealthModule.IsReceivingDamage)
                 return;
 
@@ -119,11 +133,8 @@ namespace Character
         /// Ensures that the user is able to attack, if so it starts triggering the attack action
         /// </summary>
         /// <param name="obj"></param>
-        private void Fire_performed(InputAction.CallbackContext obj)
+        public void HandleAttackInputPerformed()
         {
-            //if (GameManager.Instance.IsGamePaused())
-            //    return;            
-
             if (_healthModule.IsReceivingDamage || _movementController.IsMovingBackwards()
                 || _movementController.IsJumping || _movementController.IsFalling)
             {
@@ -138,11 +149,8 @@ namespace Character
         /// Stops triggering the attack action
         /// </summary>
         /// <param name="obj"></param>
-        private void Fire_canceled(InputAction.CallbackContext obj)
+        public void HandleAttackInputCanceled()
         {
-            //if (GameManager.Instance.IsGamePaused())
-            //    return;
-
             _attackController.StopAttacking();
         }
 
@@ -150,8 +158,6 @@ namespace Character
 
         #endregion
 
-        public void EnablePlayerActionMap() => _inputs.Player.Enable();
-        public void DisablePlayerActionMap() => _inputs.Player.Disable();
 
         private void Die()
         {
