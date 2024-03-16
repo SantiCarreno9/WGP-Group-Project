@@ -739,7 +739,7 @@ MonoBehaviour:
   _jumpHeight: 12
   _sprintWalkSpeedMultiplier: 3
   _sprintRotateSpeedMultiplier: 2.5
-  _sprintDuration: 20
+  _sprintDuration: 10
   _sprintRecoveryRate: 0.5
   _groundCheck: {fileID: 8580389027054825455}
   _groundRadius: 0.1
