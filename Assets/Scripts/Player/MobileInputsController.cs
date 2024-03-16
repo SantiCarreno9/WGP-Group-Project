@@ -7,6 +7,7 @@
  * 
  */
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Character.Mobile
 {
@@ -17,7 +18,7 @@ namespace Character.Mobile
         [Header("UI")]
         [SerializeField] private Joystick _joystick;
         [SerializeField] private CustomButton _joystickButton;
-        [SerializeField] private CustomButton _sprintButton;
+        [SerializeField] private Toggle _sprintToggle;
         [SerializeField] private CustomButton _jumpButton;
         [SerializeField] private CustomButton _attackButton;
 
@@ -32,32 +33,30 @@ namespace Character.Mobile
 
         private void OnEnable()
         {
-            _joystickButton.OnClicked += HandleMovementPerformed;
-            _joystickButton.OnReleased += HandleMovementCanceled;
+            _joystickButton.OnClicked.AddListener(HandleMovementPerformed);
+            _joystickButton.OnReleased.AddListener(HandleMovementCanceled);
 
-            _sprintButton.OnClicked += HandleSprintPerformed;
-            _sprintButton.OnReleased += HandleSprintCanceled;
+            _sprintToggle.onValueChanged.AddListener(HandleSprint);
 
-            _jumpButton.OnClicked += HandleJumpPerformed;
+            _jumpButton.OnClicked.AddListener(HandleJumpPerformed);
 
-            _attackButton.OnClicked += HandleAttackPerformed;
-            _attackButton.OnReleased += HandleAttackCanceled;
+            _attackButton.OnClicked.AddListener(HandleAttackPerformed);
+            _attackButton.OnReleased.AddListener(HandleAttackCanceled);
         }
 
         private void OnDisable()
         {
-            _joystickButton.OnClicked += HandleMovementPerformed;
-            _joystickButton.OnReleased += HandleMovementCanceled;
+            _joystickButton.OnClicked.RemoveListener(HandleMovementPerformed);
+            _joystickButton.OnReleased.RemoveListener(HandleMovementCanceled);
 
-            _sprintButton.OnClicked -= HandleSprintPerformed;
-            _sprintButton.OnReleased -= HandleSprintCanceled;
+            _sprintToggle.onValueChanged.RemoveListener(HandleSprint);
 
-            _jumpButton.OnClicked -= HandleJumpPerformed;
+            _jumpButton.OnClicked.RemoveListener(HandleJumpPerformed);
 
-            _attackButton.OnClicked -= HandleAttackPerformed;
-            _attackButton.OnReleased -= HandleAttackCanceled;
+            _attackButton.OnClicked.RemoveListener(HandleAttackPerformed);
+            _attackButton.OnReleased.RemoveListener(HandleAttackCanceled);
         }
-        
+
         void Update()
         {
             if (_isJoystickPressed)
@@ -66,19 +65,21 @@ namespace Character.Mobile
 
         private void HandleMovementPerformed()
         {
-            _isJoystickPressed = true;            
+            _isJoystickPressed = true;
             _playerController.HandleMovementInputPerformed(_joystick.Direction);
         }
 
         private void HandleMovementCanceled()
         {
             _isJoystickPressed = false;
-            _playerController.HandleMovementInputCanceled();            
+            _playerController.HandleMovementInputCanceled();
         }
 
-        private void HandleSprintPerformed() => _playerController.HandleSprintInputPerformed();
-
-        private void HandleSprintCanceled() => _playerController.HandleSprintInputCanceled();
+        private void HandleSprint(bool performerd)
+        {
+            if (performerd) _playerController.HandleSprintInputPerformed();
+            else _playerController.HandleSprintInputCanceled();
+        }
 
         private void HandleJumpPerformed() => _playerController.HandleJumpInputPerformed();
 
