@@ -177,7 +177,7 @@ namespace Character
             return _sprintRemainingTime / _sprintDuration;
         }
 
-        private bool CanSprint() => _sprintRemainingTime > 0;
+        public bool CanSprint() => _sprintRemainingTime > 0;
 
         #endregion
     }
