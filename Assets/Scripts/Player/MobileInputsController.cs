@@ -14,6 +14,7 @@ namespace Character.Mobile
     public class MobileInputsController : MonoBehaviour
     {
         [SerializeField] private PlayerController _playerController;
+        [SerializeField] private MovementController _movementController;
 
         [Header("UI")]
         [SerializeField] private Joystick _joystick;
@@ -61,6 +62,8 @@ namespace Character.Mobile
         {
             if (_isJoystickPressed)
                 HandleMovementPerformed();
+
+            UpdateSprintButtonState();
         }
 
         private void HandleMovementPerformed()
@@ -79,6 +82,12 @@ namespace Character.Mobile
         {
             if (performerd) _playerController.HandleSprintInputPerformed();
             else _playerController.HandleSprintInputCanceled();
+        }
+
+        private void UpdateSprintButtonState()
+        {
+            if (!_movementController.CanSprint())
+                _sprintToggle.isOn = false;
         }
 
         private void HandleJumpPerformed() => _playerController.HandleJumpInputPerformed();
