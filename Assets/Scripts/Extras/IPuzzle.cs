@@ -1,5 +1,13 @@
-public interface IPuzzle
+namespace Puzzle
 {
-    void SetUp();
-    void Solve();
+    public enum PuzzleType
+    {
+        Door_Key
+    }
+    public interface IPuzzle
+    {
+        PuzzleType Type { get; }
+        void SetUp();
+        void Solve();
+    }
 }

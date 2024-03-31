@@ -1,25 +1,30 @@
 using UnityEngine;
 
-public class DoorPuzzle : MonoBehaviour, IPuzzle
+namespace Puzzle
 {
-    [SerializeField] private TriggerArea _puzzleObstacle;
-    [SerializeField] private TriggerArea _doorArea;
-
-    private void Start()
+    public class DoorPuzzle : MonoBehaviour, IPuzzle
     {
-        SetUp();
-    }
+        [SerializeField] private GameObject _puzzleObstacle;
+        [SerializeField] private TriggerArea _doorArea;
 
-    public void SetUp()
-    {        
-        _puzzleObstacle.gameObject.SetActive(true);
-        _doorArea.enabled = false;
-    }
+        public PuzzleType Type => PuzzleType.Door_Key;
 
-    public void Solve()
-    {
-        _puzzleObstacle.gameObject.SetActive(false);
-        _doorArea.enabled = true;
-    }
+        private void Start()
+        {
+            SetUp();
+        }
 
+        public void SetUp()
+        {
+            _puzzleObstacle.SetActive(true);
+            _doorArea.enabled = false;
+        }
+
+        public void Solve()
+        {            
+            _doorArea.enabled = true;
+            _puzzleObstacle.SetActive(false);
+        }
+
+    }
 }

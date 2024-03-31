@@ -1,10 +1,11 @@
 using UnityEngine;
+using Character;
 
-namespace Character.UI
+namespace Inventory
 {
     public class InventoryPresenter : MonoBehaviour
     {
-        [SerializeField] private DummyInventoryView _inventoryView;
+        [SerializeField] private InventoryView _inventoryView;
         [SerializeField] private SceneInteractionsController interactionsController;
 
         private void OnEnable()
