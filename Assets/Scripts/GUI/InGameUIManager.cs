@@ -11,6 +11,9 @@ public class InGameUIManager : MonoBehaviour
     [SerializeField] GameObject inventoryCanva;
     [SerializeField] GameObject saveGameCanva;
     [SerializeField] GameObject loadGameCanva;
+    [SerializeField] GameObject quests_AchievementsCanva;
+    [SerializeField] GameObject questsCanvas;
+    [SerializeField] GameObject achievementsCanvas;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip clickSound;
     [SerializeField] AudioClip hoverSound;
@@ -23,6 +26,9 @@ public class InGameUIManager : MonoBehaviour
         inventoryCanva.SetActive(false);
         saveGameCanva.SetActive(false);
         loadGameCanva.SetActive(false);
+        quests_AchievementsCanva.SetActive(false);
+        questsCanvas.SetActive(false);
+        achievementsCanvas.SetActive(true);
     }    
     //Display the Pause Canvas
     public void displayPauseCanvas()
@@ -69,6 +75,24 @@ public class InGameUIManager : MonoBehaviour
     {
         pauseCanva.SetActive(false);
         loadGameCanva.SetActive(true);
+    }
+    public void openQuests_AchievementsCanvas()
+    {
+        quests_AchievementsCanva.SetActive(true);
+    }
+    public void closeQuests_AchievementsCanvas()
+    {
+        quests_AchievementsCanva.SetActive(false);
+    }
+    public void displayQuestsCanvas()
+    {
+        questsCanvas.SetActive(true);
+        achievementsCanvas.SetActive(false);
+    }
+    public void displayAchievementsCanvas()
+    {
+        achievementsCanvas.SetActive(true);
+        questsCanvas.SetActive(false );
     }
     //Sends to Main Menu
     public void ReturnMainMenu()
