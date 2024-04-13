@@ -39,11 +39,12 @@ namespace QuestAchievements
 
         private void OnPlayerCollectedItem(Collectable item)
         {
-            //if (item.Category == CollectableCategory.)
-            //    tasksContainer.MarkItemAsDone(_itemsAction.Id);
-            _collectedItemsCount++;
-            if (_collectedItemsCount == 5)
-                tasksContainer.MarkItemAsDone(_itemsAction.Id);
+            if (item.Category == CollectableCategory.Syringe)
+            {                
+                _collectedItemsCount++;
+                if (_collectedItemsCount == 5)
+                    tasksContainer.MarkItemAsDone(_itemsAction.Id);
+            }                
         }
 
         private void OnEnemyDied(Enemy enemy)

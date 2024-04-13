@@ -10,11 +10,30 @@ namespace Inventory
         [SerializeField] private TMP_Text _message;
 
         [SerializeField] private float _messageDuration = 2.0f;
+        [SerializeField] InventoryItem syringeSlot;
+        [SerializeField] InventoryItem bottleSlot;
 
         public void AddKey()
         {
-            _keyItem.gameObject.SetActive(true);
-            ShowHideMessage("A key was added to the inventory");
+            
+        }
+        public void AddCollectible(CollectableCategory collectableCategory)
+        {
+            switch (collectableCategory)
+            {
+                case CollectableCategory.Key:
+                    _keyItem.gameObject.SetActive(true);                    
+                    break;
+                case CollectableCategory.Syringe:
+                    syringeSlot.Increment();
+                    break;
+                case CollectableCategory.Bottle:
+                    bottleSlot.Increment();
+                    break;
+                default:
+                    break;
+            }
+            ShowHideMessage("Item collected");            
         }
 
         private void ShowMessage(string text)

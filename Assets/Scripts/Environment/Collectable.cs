@@ -2,7 +2,9 @@ using UnityEngine;
 
 public enum CollectableCategory
 {
-    Key
+    Key,
+    Syringe,
+    Bottle
 }
 
 public class Collectable : MonoBehaviour

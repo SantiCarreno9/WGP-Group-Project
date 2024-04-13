@@ -15,11 +15,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     [SerializeField] private PlayerController _playerController;
+    
     public PlayerController Player => _playerController;
 
     public UnityAction OnLevelFinished;
 
-    public bool IsGamePaused() => Time.timeScale == 0;    
+    public bool IsGamePaused() => Time.timeScale == 0;
 
     private void Awake()
     {
@@ -35,6 +36,11 @@ public class GameManager : MonoBehaviour
     private void OnDisable()
     {
         _playerController.HealthModule.OnDie -= ShowGameOverScreen;
+    }
+
+    public void FinishLevel()
+    {
+        OnLevelFinished?.Invoke();
     }
 
     public void ShowGameOverScreen()
@@ -53,8 +59,8 @@ public class GameManager : MonoBehaviour
     }
     public GameData GetCurrentGameData()
     {
-        return new GameData() 
-        { 
+        return new GameData()
+        {
             levelNumber = SaveManager.GetLevelNumberFromBuildIndex(SceneManager.GetActiveScene().buildIndex),
             playerHealth = _playerController.HealthModule.HealthPoints,
             hasPosition = true,

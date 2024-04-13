@@ -4,16 +4,14 @@ using UnityEngine;
 namespace QuestAchievements
 {
     public class FirstLevelQuests : BaseTasks
-    {        
-        [SerializeField] private TriggerArea _elevatorTrigger;
-
+    {
         private ToDoAction _keyAction;
-        private ToDoAction _completeLevelAction;        
+        private ToDoAction _completeLevelAction;
 
         void Start()
         {
             GameManager.Instance.Player.SceneInteractionsController.OnItemCollected += OnPlayerCollectedItem;
-            _elevatorTrigger.OnAreaEnter.AddListener(() => tasksContainer.MarkItemAsDone(_completeLevelAction.Id));
+            GameManager.Instance.OnLevelFinished += () => tasksContainer.MarkItemAsDone(_completeLevelAction.Id);
             AddActions();
         }
 
