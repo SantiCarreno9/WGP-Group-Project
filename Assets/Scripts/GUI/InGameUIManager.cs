@@ -40,12 +40,10 @@ public class InGameUIManager : MonoBehaviour
     public void closeInventoryCanvas()
     {
         inventoryCanva.SetActive(false);
-        pauseCanva.SetActive(true);
     }
     //Open the Inventory Canvas
     public void openInventoryCanvas()
     {
-        pauseCanva.SetActive(false);
         inventoryCanva.SetActive(true);
     }
     //Close the SaveGame Canvas

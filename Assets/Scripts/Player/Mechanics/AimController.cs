@@ -29,8 +29,6 @@ public class AimController : MonoBehaviour
 
     private Vector3 _boxCastCenter;
     private bool _targetFound = false;
-    private Ray _ray;
-    private RaycastHit _hit;
     private Collider[] _foundColliders = new Collider[5];
 
     private Transform _target = null;

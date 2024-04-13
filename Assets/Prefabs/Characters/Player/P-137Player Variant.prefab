@@ -588,14 +588,6 @@ PrefabInstance:
       propertyPath: _groundMask.m_Bits
       value: 192
       objectReference: {fileID: 0}
-    - target: {fileID: 3638213703871173947, guid: e75965e35333dd346a4814506dd279e5, type: 3}
-      propertyPath: m_Height
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3638213703871173947, guid: e75965e35333dd346a4814506dd279e5, type: 3}
-      propertyPath: m_Radius
-      value: 0.15
-      objectReference: {fileID: 0}
     - target: {fileID: 4372309093239539623, guid: e75965e35333dd346a4814506dd279e5, type: 3}
       propertyPath: _animator
       value: 

@@ -20088,9 +20088,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2295580258610575560, guid: 684343131d9795b49a798af0524fd011, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.70759887
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409513292389309522, guid: 684343131d9795b49a798af0524fd011, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3043469713750042942, guid: 684343131d9795b49a798af0524fd011, type: 3}
       propertyPath: m_Name
       value: PlayerWithCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620113338531803514, guid: 684343131d9795b49a798af0524fd011, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.70759887
       objectReference: {fileID: 0}
     - target: {fileID: 3636137922961666308, guid: 684343131d9795b49a798af0524fd011, type: 3}
       propertyPath: m_LocalPosition.x
