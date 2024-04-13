@@ -19,6 +19,7 @@ namespace Character
         [SerializeField] private AvatarRigController _avatarRigController;
         [SerializeField] private WeaponController _weaponController;
 
+        public WeaponController WeaponController => _weaponController;
         private bool _isAttacking = false;
 
         /// <summary>
@@ -26,7 +27,7 @@ namespace Character
         /// </summary>
         public void StartAttacking()
         {
-            _aimController.EnableAim();            
+            _aimController.EnableAim();
             _avatarRigController.EnableAimRig();
             _avatarRigController.OnAimRigActivated += TriggerAttack;
         }

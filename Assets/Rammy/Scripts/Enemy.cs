@@ -9,6 +9,7 @@
 using SlimUI.ModernMenu;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour, IHealth
 {
@@ -33,6 +34,8 @@ public class Enemy : MonoBehaviour, IHealth
     private IHealth playerHealth;
     EnemyState enemyState = EnemyState.Idle;
     public int Health { get; private set; } = 100;
+
+    public UnityAction<Enemy> OnDied;
 
     public int HealthPoints => Health;
 
@@ -159,6 +162,7 @@ public class Enemy : MonoBehaviour, IHealth
         agent.enabled = false;
         collider.enabled = false;
         Destroy(gameObject, deathTime);
+        OnDied?.Invoke(this);
     }
 
   /*  void UpdateAttackCooldown()

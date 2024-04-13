@@ -892,6 +892,7 @@ MonoBehaviour:
   _movementController: {fileID: 1119899374080309433}
   _attackController: {fileID: 2114680422687109151}
   _healthModule: {fileID: 4442969739024887393}
+  _sceneInteractionsController: {fileID: 2902676482314411383}
 --- !u!1 &6851828850801144758
 GameObject:
   m_ObjectHideFlags: 0

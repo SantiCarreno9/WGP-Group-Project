@@ -7,6 +7,7 @@
  * 
  */
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Pool;
 
 public class WeaponController : MonoBehaviour
@@ -28,6 +29,8 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private int _maxSize = 20;    
 
     private float _nextTimeToShoot = 0;
+
+    public UnityAction OnShot;
 
     private void Awake()
     {
@@ -91,5 +94,6 @@ public class WeaponController : MonoBehaviour
         projectile.Shoot();
         projectile.StartDeactivationTimer();
         _nextTimeToShoot = Time.time + _cooldown;
+        OnShot?.Invoke();
     }
 }

@@ -18,11 +18,15 @@ namespace Character
         [SerializeField] private MovementController _movementController;
         [SerializeField] private AttackController _attackController;
         [SerializeField] private HealthModule _healthModule;
+        [SerializeField] private SceneInteractionsController _sceneInteractionsController;
 
         private PlayerInputs _inputs;
 
         public Transform Transform => transform;
+        public MovementController MovementController => _movementController;
         public HealthModule HealthModule => _healthModule;
+        public AttackController AttackController => _attackController;
+        public SceneInteractionsController SceneInteractionsController => _sceneInteractionsController;
 
         private void Awake()
         {
@@ -58,7 +62,7 @@ namespace Character
 
         #region MOVEMENT        
         private void Move_performed(InputAction.CallbackContext obj) => HandleMovementInputPerformed(obj.ReadValue<Vector2>());
-        
+
         private void Move_canceled(InputAction.CallbackContext obj) => HandleMovementInputCanceled();
 
         private void Run_performed(InputAction.CallbackContext obj) => HandleSprintInputPerformed();
@@ -71,7 +75,7 @@ namespace Character
 
         #region ATTACK        
         private void Attack_performed(InputAction.CallbackContext obj) => HandleAttackInputPerformed();
-        
+
         private void Attack_canceled(InputAction.CallbackContext obj) => HandleAttackInputCanceled();
 
         #endregion        
