@@ -26,6 +26,7 @@ namespace Inventory
                     _inventoryView.AddKey();
                     break;
                 default:
+                    _inventoryView.AddCollectible(item.Category);
                     break;
             }
         }
