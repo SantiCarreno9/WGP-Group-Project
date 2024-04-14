@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Puzzle
 {
@@ -6,6 +7,8 @@ namespace Puzzle
     {
         [SerializeField] private GameObject _puzzleObstacle;
         [SerializeField] private TriggerArea _doorArea;
+
+        public UnityEvent OnSolved;
 
         public PuzzleType Type => PuzzleType.Door_Key;
 
@@ -21,9 +24,10 @@ namespace Puzzle
         }
 
         public void Solve()
-        {            
+        {
+            OnSolved?.Invoke();
             _doorArea.enabled = true;
-            _puzzleObstacle.SetActive(false);
+            _puzzleObstacle.SetActive(false);            
         }
 
     }

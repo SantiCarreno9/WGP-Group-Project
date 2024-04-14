@@ -1,4 +1,5 @@
 using Character;
+using Puzzle;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +7,8 @@ namespace QuestAchievements
 {
     public class SecondLevelAchievements : BaseTasks
     {
-        [SerializeField] private PlayerController _playerController;
         [SerializeField] private Enemy[] _enemies;
+        [SerializeField] private DoorPuzzle _doorPuzzle;
 
         private byte _deadEnemiesCount = 0;
         private byte _collectedItemsCount = 0;
@@ -20,7 +21,6 @@ namespace QuestAchievements
 
         void Start()
         {
-
             GameManager.Instance.Player.SceneInteractionsController.OnItemCollected += OnPlayerCollectedItem;
             for (int i = 0; i < _enemies.Length; i++)
                 _enemies[i].OnDied += OnEnemyDied;
@@ -29,6 +29,7 @@ namespace QuestAchievements
                 if (GameManager.Instance.Player.HealthModule.HasMaxHealth())
                     tasksContainer.MarkItemAsDone(_damageAction.Id);
             };
+            _doorPuzzle.OnSolved.AddListener(() => tasksContainer.MarkItemAsDone(_locksmithAction.Id));
             AddActions();
         }
 
@@ -36,7 +37,7 @@ namespace QuestAchievements
         {
             _enemiesAction = new ToDoAction("Kill all the enemies.");
             AddAction(_enemiesAction);
-            _itemsAction = new ToDoAction("Collect the five syringes.");
+            _itemsAction = new ToDoAction("Collect the five bottles.");
             AddAction(_itemsAction);
             _damageAction = new ToDoAction("Finish the level with no damage.");
             AddAction(_damageAction);
@@ -46,11 +47,12 @@ namespace QuestAchievements
 
         private void OnPlayerCollectedItem(Collectable item)
         {
-            //if (item.Category == CollectableCategory.)
-            //    tasksContainer.MarkItemAsDone(_itemsAction.Id);
-            _collectedItemsCount++;
-            if (_collectedItemsCount == 5)
-                tasksContainer.MarkItemAsDone(_itemsAction.Id);
+            if(item.Category == CollectableCategory.Bottle)
+            {
+                _collectedItemsCount++;
+                if (_collectedItemsCount == 5)
+                    tasksContainer.MarkItemAsDone(_itemsAction.Id);
+            }            
         }
 
         private void OnEnemyDied(Enemy enemy)

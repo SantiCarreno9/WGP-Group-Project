@@ -1,20 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using Puzzle;
 using UnityEngine;
 
 namespace QuestAchievements
 {
     public class TutorialLevelQuests : BaseTasks
     {
-        [SerializeField] private TriggerArea _elevatorTrigger;
-        
+        [SerializeField] private Enemy _enemy;
+        [SerializeField] private DoorPuzzle _doorPuzzle;
+
         private ToDoAction _enemyAction;
-        private ToDoAction _keyAction;        
+        private ToDoAction _keyAction;
         private ToDoAction _puzzleAction;
 
         void Start()
         {
-            GameManager.Instance.Player.SceneInteractionsController.OnItemCollected += OnPlayerCollectedItem;                        
+            GameManager.Instance.Player.SceneInteractionsController.OnItemCollected += OnPlayerCollectedItem;
+            _doorPuzzle.OnSolved.AddListener(() => tasksContainer.MarkItemAsDone(_puzzleAction.Id));
+            _enemy.OnDied += (enemy) => tasksContainer.MarkItemAsDone(_enemyAction.Id);
             AddActions();
         }
 

@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     [SerializeField] private PlayerController _playerController;
-    
+
     public PlayerController Player => _playerController;
 
     public UnityAction OnLevelFinished;
@@ -51,6 +51,11 @@ public class GameManager : MonoBehaviour
     public void GoToLevel(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void LoadSceneByIndex(int index)
+    {
+        SceneManager.LoadScene(index);
     }
 
     void GameOver()

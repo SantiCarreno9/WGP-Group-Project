@@ -8,6 +8,6 @@ namespace Puzzle
     {
         PuzzleType Type { get; }
         void SetUp();
-        void Solve();
+        void Solve();        
     }
 }

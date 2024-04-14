@@ -1,17 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace QuestAchievements
 {
     public class TutorialLevelAchievements : BaseTasks
-    {
-        [SerializeField] private TriggerArea _elevatorTrigger;
-
+    {        
         private ToDoAction _completeLevelAction;        
 
         void Start()
-        {            
+        {
+            GameManager.Instance.OnLevelFinished += () => tasksContainer.MarkItemAsDone(_completeLevelAction.Id);
             AddActions();
         }
 

@@ -3460,6 +3460,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _puzzleObstacle: {fileID: 522181485}
   _doorArea: {fileID: 1560195531}
+  OnSolved:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &523756126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14088,23 +14091,55 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5350334944766878877, guid: 0ad5e04fea9bc4944b454befc9813c8f, type: 3}
+      propertyPath: OnFadedOut.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350334944766878877, guid: 0ad5e04fea9bc4944b454befc9813c8f, type: 3}
       propertyPath: OnFadedOut.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350334944766878877, guid: 0ad5e04fea9bc4944b454befc9813c8f, type: 3}
+      propertyPath: OnFadedOut.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5350334944766878877, guid: 0ad5e04fea9bc4944b454befc9813c8f, type: 3}
       propertyPath: OnFadedOut.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1858192073}
     - target: {fileID: 5350334944766878877, guid: 0ad5e04fea9bc4944b454befc9813c8f, type: 3}
+      propertyPath: OnFadedOut.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1858192073}
+    - target: {fileID: 5350334944766878877, guid: 0ad5e04fea9bc4944b454befc9813c8f, type: 3}
+      propertyPath: OnFadedOut.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350334944766878877, guid: 0ad5e04fea9bc4944b454befc9813c8f, type: 3}
       propertyPath: OnFadedOut.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: FinishLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350334944766878877, guid: 0ad5e04fea9bc4944b454befc9813c8f, type: 3}
+      propertyPath: OnFadedOut.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadSceneByIndex
       objectReference: {fileID: 0}
     - target: {fileID: 5350334944766878877, guid: 0ad5e04fea9bc4944b454befc9813c8f, type: 3}
       propertyPath: OnFadedOut.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5350334944766878877, guid: 0ad5e04fea9bc4944b454befc9813c8f, type: 3}
+      propertyPath: OnFadedOut.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350334944766878877, guid: 0ad5e04fea9bc4944b454befc9813c8f, type: 3}
+      propertyPath: OnFadedOut.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350334944766878877, guid: 0ad5e04fea9bc4944b454befc9813c8f, type: 3}
       propertyPath: OnFadedOut.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350334944766878877, guid: 0ad5e04fea9bc4944b454befc9813c8f, type: 3}
+      propertyPath: OnFadedOut.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
