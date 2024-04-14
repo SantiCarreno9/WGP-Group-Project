@@ -16,6 +16,7 @@ namespace UI
                 if (draggable.Category == _supportedDraggableCategory)
                 {
                     OnItemDroppedOn?.Invoke();
+                    draggable.Reset();
                     draggable.Hide();
                 }                    
             }

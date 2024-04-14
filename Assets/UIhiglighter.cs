@@ -31,32 +31,32 @@ public class UIHighlighter : MonoBehaviour
         switch (element)
         {
             case ElementToHighlight.Movement:
-                adviceText.text = "Touch and drag Joystick to move";
+                adviceText.text = "TOUCH AND DRAG JOYSTICK TO MOVE";
                 MoveMeTo(movement);
                 YoyoAnim();
                 break;
             case ElementToHighlight.Run:
-                adviceText.text = "Touch this button to sprint";
+                adviceText.text = "TOUCH THIS BUTTON TO SPRINT";
                 MoveMeTo(runBTN);
                 YoyoAnim();
                 break;
             case ElementToHighlight.Jump:
-                adviceText.text = "Tap this button to jump";
+                adviceText.text = "TAP THIS BUTTON TO JUMP";
                 MoveMeTo(jumpBTN);
                 YoyoAnim();
                 break;
             case ElementToHighlight.Shoot:
-                adviceText.text = "Tap this button to shoot";
+                adviceText.text = "TAP THIS BUTTON TO SHOOT";
                 MoveMeTo(shootBTN);
                 YoyoAnim();
                 break;
             case ElementToHighlight.Inventory:
-                adviceText.text = "this button to open inventory";
+                adviceText.text = "THIS BUTTON TO OPEN INVENTORY";
                 MoveMeTo(inventoryBTN);
                 YoyoAnim();
                 break;
             case ElementToHighlight.Map:
-                adviceText.text = "This is the mini map";
+                adviceText.text = "THIS IS THE MINI MAP";
                 MoveMeTo(map);
                 YoyoAnim();
                 break;
@@ -81,7 +81,7 @@ public class UIHighlighter : MonoBehaviour
     {
         highlighter.localScale = new Vector3(1,1,1);
         highlighter.DOScale(3, 1).SetLoops(4, LoopType.Yoyo) ;
-        adviceContainer.DOScale(2, 1).SetLoops(4, LoopType.Yoyo);
+        adviceContainer.DOScale(2, 2).SetLoops(4, LoopType.Yoyo);
     }
 
 
