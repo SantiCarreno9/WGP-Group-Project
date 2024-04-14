@@ -39,6 +39,12 @@ namespace UI
             _image.raycastTarget = true;
         }
 
+        public void Reset()
+        {
+            _rectTransform.position = _initialPosition;
+            _image.raycastTarget = true;
+        }
+
         public void Hide()
         {
             gameObject.SetActive(false);

@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b355e65427327bd459b67736941b603b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 3.868558
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b355e65427327bd459b67736941b603b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: -4.171772
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b355e65427327bd459b67736941b603b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: -2.2461185
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b355e65427327bd459b67736941b603b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -67,6 +67,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b355e65427327bd459b67736941b603b, type: 3}
       propertyPath: m_Name
       value: TheCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b355e65427327bd459b67736941b603b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

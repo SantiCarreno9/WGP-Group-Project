@@ -7,6 +7,7 @@
  * 
  */
 using UnityEngine;
+using UnityEngine.Events;
 namespace Character
 {
     public class MovementController : MonoBehaviour
@@ -41,7 +42,7 @@ namespace Character
         [Header("Additional")]
         [Tooltip("Force used to push the character when stepping on an enemy")]
         [SerializeField] private float _pushForce = 0.5f;
-
+        
         private float _sprintRemainingTime = 0;
         private bool _isSprinting = false;
 
@@ -52,6 +53,9 @@ namespace Character
         private float _yVelocity = 0;
         private Vector3 _movement;
 
+        public UnityAction<Vector2> OnMoved;
+        public UnityAction OnJumped;
+        public UnityAction OnSprinted;
 
         void Awake()
         {
@@ -90,6 +94,13 @@ namespace Character
 
         private void Move()
         {
+            if (_movementInputs.x != 0 || _movementInputs.y != 0)
+            {
+                OnMoved?.Invoke(_movementInputs);
+                if (IsSprinting())
+                    OnSprinted?.Invoke();
+            }                
+
             _walkSpeedMultiplier = (_isSprinting && CanSprint()) ? _sprintWalkSpeedMultiplier : 1;
             _rotateSpeedMultiplier = (_isSprinting && CanSprint()) ? _sprintRotateSpeedMultiplier : 1;
 
@@ -140,6 +151,7 @@ namespace Character
             {
                 _yVelocity += _jumpHeight;
                 IsJumping = true;
+                OnJumped?.Invoke();
             }
         }
 

@@ -20,15 +20,7 @@ namespace Inventory
 
         private void OnCollectablePickedUp(Collectable item)
         {
-            switch (item.Category)
-            {
-                case CollectableCategory.Key:
-                    _inventoryView.AddKey();
-                    break;
-                default:
-                    _inventoryView.AddCollectible(item.Category);
-                    break;
-            }
+            _inventoryView.AddCollectible(item.Category);
         }
     }
 }

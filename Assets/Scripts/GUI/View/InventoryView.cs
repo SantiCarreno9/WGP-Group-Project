@@ -15,17 +15,25 @@ namespace Inventory
 
         public void AddKey()
         {
-            _keyItem.gameObject.SetActive(true);
-            ShowHideMessage("A key was added to the inventory");
+            
         }
         public void AddCollectible(CollectableCategory collectableCategory)
         {
-            if(collectableCategory == CollectableCategory.Syringe)
+            switch (collectableCategory)
             {
-                syringeSlot.Increment();
-                return;
+                case CollectableCategory.Key:
+                    _keyItem.gameObject.SetActive(true);                    
+                    break;
+                case CollectableCategory.Syringe:
+                    syringeSlot.Increment();
+                    break;
+                case CollectableCategory.Bottle:
+                    bottleSlot.Increment();
+                    break;
+                default:
+                    break;
             }
-            bottleSlot.Increment();
+            ShowHideMessage("Item collected");            
         }
 
         private void ShowMessage(string text)

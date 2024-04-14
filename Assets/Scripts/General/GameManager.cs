@@ -7,18 +7,20 @@
  * 
  */
 using Character;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     [SerializeField] private PlayerController _playerController;
-    public GameObject Player => _playerController.gameObject;
 
-    public bool IsGamePaused() => Time.timeScale == 0;    
+    public PlayerController Player => _playerController;
+
+    public UnityAction OnLevelFinished;
+
+    public bool IsGamePaused() => Time.timeScale == 0;
 
     private void Awake()
     {
@@ -36,6 +38,11 @@ public class GameManager : MonoBehaviour
         _playerController.HealthModule.OnDie -= ShowGameOverScreen;
     }
 
+    public void FinishLevel()
+    {
+        OnLevelFinished?.Invoke();
+    }
+
     public void ShowGameOverScreen()
     {
         Invoke("GameOver", 3);
@@ -46,14 +53,19 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void LoadSceneByIndex(int index)
+    {
+        SceneManager.LoadScene(index);
+    }
+
     void GameOver()
     {
         SceneManager.LoadScene("GameOver");
     }
     public GameData GetCurrentGameData()
     {
-        return new GameData() 
-        { 
+        return new GameData()
+        {
             levelNumber = SaveManager.GetLevelNumberFromBuildIndex(SceneManager.GetActiveScene().buildIndex),
             playerHealth = _playerController.HealthModule.HealthPoints,
             hasPosition = true,
